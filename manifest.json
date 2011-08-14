@@ -1,0 +1,25 @@
+{
+  "name": "Pungle.ME - Social Good Negotiator",
+  "version": "1.0.0",
+  "description": "Support causes while you shop online. You're a winner!",  
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/ca_nothing_ico48x48.png",
+    "128": "images/ca_nothing_ico64x64.png"
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "background_page": "background.html",  
+  "page_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "Shopping for social good!"  
+  },
+  "content_scripts": [{
+    "all_frames": false,
+    "js": [ "scripts/content.js" ],
+    "matches": [ "<all_urls>" ],
+    "run_at": "document_end"
+  }]
+}
