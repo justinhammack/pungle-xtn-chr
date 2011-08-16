@@ -32,8 +32,9 @@ var slideUpTimeOut = null;
 */
 
 
-/* -----------> REMOVE THIS BLURB, IT'S EVIDENCE BRO! <--------------
-* Main Content-Script Process
+/*
+*-------------------------------------------------------------------------------
+* Content Script Messenger
 * The main process consisits of two parts:
 *  1. Did we come from we-care.com or were we referrered by we-care?
 *  2. Any other case i.e(direct link, typed web address, other affiliate link etc..)
@@ -44,6 +45,7 @@ var slideUpTimeOut = null;
 *  If we have come from we-care in some fashion, alert the extension to flag the current merchant
 *  as visited.  If we are on another causes' mall and if we are not a read-only plugin alert
 *  the extension to apply the new cause.
+*-------------------------------------------------------------------------------
 */
 
 if (pXtn_URL.search("pungle.me") == -1 && document.referrer.search("pungle.me") == -1) {
@@ -61,7 +63,7 @@ if (pXtn_URL.search("pungle.me") == -1 && document.referrer.search("pungle.me") 
       WCR_merchantName = msg.merchant;
       WCR_subdom = msg.subdom;
       
-      if (msg.causeName != "") { WCR_causeName = msg.causeName; }
+      if (msg.cause != "") { WCR_causeName = msg.cause; }
       
       WCR_earn = msg.earn;
       WCR_coupon = msg.coupon;

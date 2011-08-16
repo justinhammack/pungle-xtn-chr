@@ -42,7 +42,7 @@ function setItem(key, value){
 
 
 // Set localStorage by key only if does not exist
-function setItemIfNotExists(key, value) {
+function setIfEmpty(key, value) {
   try {
     if (getItem(key) == "") {
       setItem(key, value);
@@ -101,32 +101,63 @@ function cleanURL(url){
 }
 
 
-// This method sends the redirect message to a specific tab on 'port' telling the content-script to run the slider.
+// This method sends the redirect message to a specific tab on 'port' telling the content-script to run the redirect.
 function sendRedirectMessage(port, url) {
   if (!port) {
+    log("REDIRECT ERROR: PORT NOT FOUND!");
     return;
   }
-  var flag = WCR.isRedirect(cleanURL(url));
   
-  if (flag && !WCR.hasSliderFired(cleanURL(url))) {
-    log("(BG) Sending Redirect Message " + url);
+  var flag = pXtn.isRedirect(cleanURL(url));
+  
+  if (flag && !pXtn.hasRedirectRun(cleanURL(url))) {
+    // We are clear to redirect and has not run before this call.
+    log("Extension => Redirect Request " + url);
+    
+    // Super scrubbed URL, just for good measure.
     var clean = cleanURL(url);
-    WCR.sliderFired(clean);
-    var merchantName = WCR.getMerchantName(clean);
-    var logoURL = WCR.getLogoURL();
-    var couponStr = WCR.getMerchantCoupon(clean);
-    log("[[SendRedirect]] Got " + merchantName + " - > " + couponStr);
+    
+    // Mark the URL as having been redirected.
+    pXtn.redirectRun(clean);
+    
+    // Collect merchant & cause information.
+    var merchantName = "Amazon"; // pXtn.getMerchantName(clean);
+    var causeName = pXtn.getCauseName();
+    
+    // Don't need logo.. var logoURL = WCR.getLogoURL();
+    // Not passing coupons.. var couponStr = WCR.getMerchantCoupon(clean);
+    
+    log("Extension => Compiling Message for ID: " + merchantName);
     
     port.postMessage({
       response: "redirect",
       merchant: merchantName,
-      logo: logoURL,
-      subdom: getItem("subdomain"),
-      causeName: WCR.getCauseName(),
-      earn: WCR.isEarnDonation(clean),
-      coupon: couponStr
+      // logo: logoURL,
+      // subdom: getItem("subdomain"),
+      cause: causeName
+      // earn: WCR.isEarnDonation(clean),
+      // coupon: couponStr
     });
+    
+    log("Redirect message sent.");
   }
+}
+
+
+function queryVersion() {
+  var jsonUrl = chrome.extension.getURL("manifest.json");
+  var xhr = new XMLHttpRequest();
+  var qVersion = "Undeclared";
+  
+  xhr.open("GET", jsonUrl, false);  
+  xhr.send();
+  
+  if(xhr.readyState == 4 && xhr.status == 200) {
+    var manifest = JSON.parse(xhr.responseText);
+    qVersion = manifest.version;
+  }
+  
+  return qVersion;
 }
 
 
