@@ -11,17 +11,8 @@
   *-----------------------------------------------------------------------------
   * Description: Handles affiliate referrals transparently for user.
   * Author: note@pungle.me (Justin Hammack)
-  *-----------------------------------------------------------------------------
-  */
-  
-  
-  /*
-  *-----------------------------------------------------------------------------
   *
-  *
-  *   CLEANUP FUNCTION CALLS, REORGANIZE SO IT DOESN'T SEEM SO BLATANTLY RIPPED 
   *   find all: // <-- wtf does this do? 
-  *
   *
   *-----------------------------------------------------------------------------
   */
@@ -40,7 +31,7 @@
   // Setup localStorage.
   // log("VERSION: " + getItem("ltvid")); // <--- do we need this vintage cause/plugin bullshit, ltvid?
   log("Loading Pungle Extension: v" + VERSION);
-  log("Setup Environment");
+  log("Initializing environment.");
   
   setIfEmpty("version", VERSION); // track version
   
@@ -57,7 +48,7 @@
   // pXtn.updateMerchantHash(); // <-- wtf does this do? 
   
   // Adds trim method to string.
-  String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g,""); }
+  // Obsolete: String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g,""); }
   
 
   /*
@@ -75,13 +66,12 @@
     // listen for incoming content script messages
     port.onMessage.addListener(function (msg) {
       if (msg.query == 'isRedirect') { 
-        // Redirect has been requested by the content script.
+        // Content script sends initial message 'isRedirect'? 
         
-        log("Mesage Received: " + msg.query);
-        log("From Tab URL: " + cleanURL(msg.url));
+        log("EX:: received => query: " + msg.query + ", URL: " + cleanURL(msg.url));        
         
         // Check to see if redirect called.
-        var flag = WCR.isRedirect(cleanURL(msg.url));
+        var flag = pXtn.isRedirect(cleanURL(msg.url));
         
         // Establish listener bridge for tab.onUpdated.
         listenerBridge[cleanURL(msg.url)] = port;
@@ -89,50 +79,65 @@
         if (flag && !pXtn.hasRedirectRun(cleanURL(msg.url))) { 
           // Check to make sure redirect called & it hasn't already run.
           
-          log("Sending Redirect Message " + msg.url);
+          log("EX:: Redirect approved. Setting redirect as having run for URL.");
           var clean = cleanURL(msg.url);
+          
+          // Set the redirect as having run for this URL.
           pXtn.redirectRun(clean);
           
-          var merchantName = WCR.getMerchantName(clean);
-          log(" Sending  " + merchantName);
+          // Set the Icon to visible for this URL.
+          chrome.pageAction.show(port.sender.tab.id);
           
-          var couponStr = WCR.getMerchantCoupon(clean);
-          log("Got " + merchantName + " - > " + couponStr);
+          // Get the Merchant ID & the Cause ID.
+          var merchantID = pXtn.getMerchantID(clean);
+          // var causeName = pXtn.getCauseName();          
+          var causeName = 0;
           
-          var logoURL = WCR.getLogoURL();
+          log("EX:: set params => merchant: " + merchantID + ", cause: " + causeName);
           
-          port.postMessage({ // <-- wtf does this do? 
+          // var couponStr = WCR.getMerchantCoupon(clean);
+          // log("Got " + merchantName + " - > " + couponStr);
+          // var logoURL = WCR.getLogoURL();
+          
+          port.postMessage({ 
             response: "redirect",
-            merchant: merchantName,
+            merchant: merchantID,
             // logo: logoURL,
             // subdom: getItem("subdomain"),
-            cause: pXtn.getCauseName()
+            cause: causeName
             // earn: WCR.isEarnDonation(clean), // <-- require high five?
             // coupon: couponStr
           });
-        }
+          
+          log("EX:: sent => response: redirect");
+        } else log("EX:: Redirect not flagged or has already run. No response sent.");
       } else if (msg.query == "send" || msg.query == "requestSend") { 
         // Prepare to send the content script the affiliate link.
         
+        log("EX:: received => query: " + msg.query);
+        log("EX:: Collecting parameters. (again?)");
+        
         var url = msg.url;
         url = removeWWW(cleanURL(url));
-        wcr_to = WCR.getMerchant(url);
-        log("Message " + msg.query + "  " + url + "  Merchant " + wcr_to);
+        var merchantID = pXtn.getMerchantID(url);
+        var causeID = 0;
         
-        if ((msg.query == "requestSend" && !WCR.isEarnDonation(url)) || msg.query == "send") { 
+        if (msg.query == "requestSend" || msg.query == "send") { 
           // Allow automatic injection of referral link.
+          // removed condition:  && !WCR.isEarnDonation(url)
           
-          var redirectURL = pXtn.affiliateLink(wcr_to, true);
-          log("Sending Redirect URL: " + redirectURL);
+          var redirectURL = pXtn.affiliateLink(merchantID, causeID);
           
           port.postMessage({
             response: 'inject',
             url: redirectURL
           });
+          
+          log("EX:: sent => response: inject, URL: " + redirectURL);
         } else { 
           // Require user interaction.
           
-          log("User action required at: " + url);
+          log("EX:: User action required at: " + url);
         }
       } /* else if (msg.action == "updateSubdom") { // <-- to update cause thinger
         if (READ_ONLY == 0 || getItem("subdomain") == "") {
@@ -161,15 +166,14 @@
   */
   chrome.tabs.onUpdated.addListener(function (tabid, changeInfo, tab) {
     thisURL = changeInfo.url;
-    log("Tab Updated => ID: " + tabid + " " + changeInfo.status);
-    log("Tab Updated => URL: " + thisURL);
+    log("TL:: update => ID: " + tabid + " " + changeInfo.status + ", URL: " + thisURL);    
     // log("Tab Status: " + changeInfo.status);
     
     // create new monitor if does not exist
     if (typeof (tabMonitor[tabid]) == "undefined") {
       tabMonitor[tabid] = new PTUWatch(tabid);
-      log("Created New Tab Monitor");
-    } else log("Tab Monitor Exists");
+      log("TL:: Create Tab Monitor");
+    } else log("TL:: Found Tab Monitor");
     
     // where are we? pungle referral? prevents redirect capture
     /* if (typeof (thisURL) != "undefined") {
@@ -177,7 +181,7 @@
       
       var redirectURL = ""; // initialize variable
       
-      if (thisURL.search('/Redirect/Store/') != -1) {
+      if (thisURL.search('pungle.me') != -1) {
         var pos = thisURL.indexOf('/Redirect/Store/');
         pos += 16;
         var len = thisURL.length;
@@ -200,6 +204,7 @@
     if ( pXtn.exists(thisURL) && !pXtn.wasVisited(removeWWW(thisURL)) ) {
       // We must redirect, first time visit.
       
+      log("TL:: New session opened. SET redirect => true");
       redirect = true;
       
       // Set as visited for session reference.
@@ -207,13 +212,14 @@
       pXtn.setVisited(removeWWW(thisURL));
       
       // Get the merchant name. Change to get Merchant ID?? 
-      pXtn_dest = pXtn.getMerchant(thisURL);
+      // pXtn_dest = pXtn.getMerchantID(thisURL);
       
-      if (pXtn.isRedirectFlagged(pXtn_dest)) {
+      /* if (pXtn.isRedirectFlagged(pXtn_dest)) {
         // Check to see if we came from pungle, if so, don't redirect.
         redirect = false;
-      }
-    }
+        log("TL:: User came from pungle. redirect => false");
+      } */
+    } else log("TL:: Domain not found in database.");
     
     /* Checks to see if user came from other affiliate, but code is inferior.
     if (tabMonitor[tabid].isClickThru()) {
@@ -221,33 +227,33 @@
       //if the URL exists as a merchant and we have identified a clickthru,
       //then clear the current stream to setup for the next round of requests.
       if (typeof (thisURL) != "undefined" && WCR.exists(thisURL)) {
-        WCR.flagWeCareRedirect(WCR.getMerchant(thisURL));
+        WCR.flagWeCareRedirect(WCR.getMerchantID(thisURL));
         tabMonitor[tabid].clearStream();
       }
     } //end if ClickThru */
     
-    // Check if Tab URL has completed loading.
+    // Check if Tab URL has completed loading and make sure redirect has run.
     if (changeInfo.status == "complete") {
-      log("Found tab with page loaded.");
-      
       /* if (!tabMonitor[tabid].isClickThru()) { NO LONGER CHECK FOR AFF REF */
       
       // Set to the tab's loaded URL.
       var tabUrl = cleanURL(tab.url);
       
       if (pXtn.hasRedirectRun(tabUrl)) {
-        log("Extension => Redirect has run for: " + tabUrl);
+        log("TL:: Redirect has already run for: " + tabUrl);
       } else {
         if (pXtn.isRedirect(tabUrl) || pXtn.isRedirect(removeWWW(tabUrl))) {
-          log("Extension => Redirect has not run for: " + tabUrl);          
+          // log("TL:: Redirect has not run for: " + tabUrl);          
           if (listenerBridge[tabUrl]) {
             // Set port when bridge found in array.
             var port = listenerBridge[tabUrl];
             
-            log("Listener bridge established.");
+            log("TL:: Listener bridge established.");
             
             // Send redirect message to content script.
             sendRedirectMessage(port, tabUrl);
+            
+            log("TL:: Redirect called for: " + tabUrl);
           }
         }
       }
@@ -274,7 +280,7 @@
     // Cleared all conditions, que URL to be redirected.
     if (changeInfo.status == "loading" && redirect) {
       tabMonitor[tabid].clearStream();
-      log("Extension => Set Redirect True: " + thisURL);
+      log("TL:: Set Redirect => TRUE: " + thisURL);
       pXtn.setRedirect(thisURL, true);
     }
   });

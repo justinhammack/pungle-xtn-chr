@@ -8,10 +8,7 @@
 var pXtn_URL = document.location.href;
 
 // Holds the cause name.
-var pXtn_causeName = "YOUR MOM";
-
-// Will store the icon filename for the users cause.
-var pXtn_causeIcon = "";
+var pXtn_causeName = 0;
 
 // Holds the current store name text.
 var pXtn_storeName = "";
@@ -19,10 +16,11 @@ var pXtn_storeName = "";
 // Time out
 var pXtn_timeout = 15000;
 
+/* DEPRICATED VARIABLES THAT ARE NO LONGER NEEDED?
+// Will store the icon filename for the users cause.
+var pXtn_causeIcon = "";
 // The current subdomain (cause). <--- WTF IS THIS?
 var pXtn_subdom;
-
-/* DEPRICATED VARIABLES THAT ARE NO LONGER NEEDED?
 // Stores the coupon string.  If any...
 var WCR_coupon = "";
 // Flag to determine if the Earn Donation button is to be rendered.
@@ -57,35 +55,53 @@ if (pXtn_URL.search("pungle.me") == -1 && document.referrer.search("pungle.me") 
   // listener on port to extension
   port.onMessage.addListener(function (msg) {
     if (msg.response == "redirect") {
-      // if the extension sends "redirect"..
+      // if the extension sends "redirect OK"..
       
-      WCR_logoURL = msg.logo;
-      WCR_merchantName = msg.merchant;
-      WCR_subdom = msg.subdom;
+      /*
+      * ENTIRE LOOP DESIGNED TO ALLOW FOR USER INTERACTION BEFORE REDIRECT
+      */
       
-      if (msg.cause != "") { WCR_causeName = msg.cause; }
+      // we have no need for this.. is this entire message wasteful?
       
-      WCR_earn = msg.earn;
-      WCR_coupon = msg.coupon;
-      console.log("Running Slider on " + pXtn_URL);
+      // WCR_logoURL = msg.logo;
+      // WCR_subdom = msg.subdom;
+      pXtn_merchantID = msg.merchant; // and we do nothing with it?
+      if (msg.cause != "") { pXtn_causeName = msg.cause; }
+      
+      // WCR_earn = msg.earn;
+      // WCR_coupon = msg.coupon;
+      
+      console.log("CS:: received => response: " + msg.response);      
+      // console.log("Content Script: What do I do with the set params?");
       
       // WTF DOES THIS DO? 
-      runSlider();
+      // runSlider();
       
       port.postMessage({
         query: "requestSend",
         url: pXtn_URL
       });
+      
+      console.log("CS:: sent => query: requestSend");
     } else if (msg.response == "inject") {
-      // if the extension sends "inject"..      
+      // if the extension sends "inject"..
+      
+      console.log("CS:: received => response: " + msg.response);
+      
       var redirectURL = msg.url;
-      var container = document.createElement('div');      
-      container.id = 'wc_container';
-      document.body.appendChild(container);
-      container.innerHTML = container.innerHTML + "<img style='display:none' id='redirect'>";
-      var iframe = document.getElementById("redirect");
-      console.log("set iframe source");
-      iframe.src = redirectURL; //'http://dev.we-care.com/TEST/redir1.php?count=0'; //redirectURL;
+      
+      // Create container that holds iFrame.
+      var pungTainer = document.createElement('div');      
+      pungTainer.id = 'pungleContainer';
+      pungTainer.style.display = 'none';
+      document.body.appendChild(pungTainer);
+      
+      // Add the iFrame to the container.
+      pungTainer.innerHTML = pungTainer.innerHTML + "<iframe id='pungleRedirect'>";
+      var iframe = document.getElementById("pungleRedirect");
+      // iframe.src = redirectURL;
+      iframe.src = "http://pungle.me/inject/#id=0&c=6";
+      console.log("CS:: Injected iFrame source.");
     }
   }); //end port onMessage event listener`
   
@@ -94,6 +110,7 @@ if (pXtn_URL.search("pungle.me") == -1 && document.referrer.search("pungle.me") 
     query: "isRedirect",
     url: pXtn_URL
   });
+  console.log("CS:: sent => query: isRedirect");
 } /* else {
   // They came from Pungle, so...
   

@@ -95,7 +95,7 @@ function cleanURL(url){
   url = url.replace("https://", "");
   url = url.substring(0, url.indexOf('/'));
   
-  log("Clean URL: " + url);
+  // log("Clean URL: " + url);
   
   return url;
 }

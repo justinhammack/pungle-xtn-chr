@@ -27,7 +27,7 @@ function PTUWatch(inTab){
   // Append a new URL or click to the stream, @param url - the new URL to append.
   this.appendClick = function (url) {
     if (clickIndex == 0) {
-      log("First URL for Tab ID: " + tabid);
+      log("TL:: First URL for Tab ID: " + tabid);
     }
     
     clicks[clickIndex++] = url;
@@ -51,7 +51,7 @@ function PTUWatch(inTab){
     clickIndex = 0;
     // isAff = false;
     completeCount = 0;
-    log("Tab ID: " + tabid + "  Cleared Link Array");
+    log("TL:: Clear Link Array => Tab ID: " + tabid);
   }
 } //end PTUWatch 
 
@@ -65,7 +65,7 @@ function pungleExtension() {
   // Variables Declared
   
   // Hash of merchants visited during this session
-  var pXtn_VistedHash = new Array();
+  var pXtn_visitedHash = new Array();
   
   // Array used to flag URLs passed through pungle.me site, do not redirect.
   var pXtn_passThru = new Array();
@@ -116,7 +116,7 @@ function pungleExtension() {
   // Updates the Merchant Hash List -- we don't need this shit
   /*
   this.updateMerchantHash = function () {
-    pXtn_VistedHash = new Array();
+    pXtn_visitedHash = new Array();
     var lastUpdate = getItem("lastUpdHash");
     var dd = lastUpdate.split("-");
     var updMonth = dd[1];
@@ -298,20 +298,20 @@ function pungleExtension() {
   }, //end initLtvid
   */
   
-  // Flag this URL as having already passed through Pungl.me site injector.
-  this.flagWeCareRedirect = function (merchant) {
+  // Obsolete: Flag this URL as having already passed through Pungl.me site injector.
+  /* this.flagPungleRedirect = function (merchant) {
     pXtn_passThru[merchant] = 1;
-  },
+  }, */
   
-  // Check if already flagged as redirected by Pungle.me site injector.
-  this.isRedirectFlagged = function (merchant) {
+  // Obsolete: Check if already flagged as redirected by Pungle.me site injector.
+  /* this.isRedirectFlagged = function (merchant) {
     return pXtn_passThru[merchant];
-  },
+  }, */
   
   // THIS DOES WHAT? Getter, test if url was clickthrough
-  this.isClickThru = function (url) {
+  /* Obsolete: this.isClickThru = function (url) {
     return WCR_ClickHash[url] == 1 ? true : false;
-  },
+  }, /*
   
   // THIS DOES WHAT? Determine if merchant requires the Earn Donation button.
   /* this.isEarnDonation = function (value) {
@@ -324,10 +324,9 @@ function pungleExtension() {
   }, */
   
   // Get the merchant name for URL (value)
-  /* this.getMerchantName = function (value) {
-    value = removeWWW(value.toLowerCase());
-    return WCR_MerchantArray[value][1];
-  }, */
+  this.getMerchantName = function (value) {
+    return pungleJSON.store[value].name;
+  },
   
   // THIS DOES WHAT? Get coupon information for the merchant
   /* this.getMerchantCoupon = function (id) {
@@ -339,10 +338,21 @@ function pungleExtension() {
     return couponStr;
   }, */
   
-  // THIS DOES WHAT? Get the merchant ID for URL
-  this.getMerchant = function (value) {
+  // Get the merchant ID for URL
+  this.getMerchantID = function (value) {
+    // clear to absolute domain
     value = removeWWW(value.toLowerCase());
-    return WCR_MerchantArray[value][0];
+    
+    for ( var i=0, len=pungleJSON.store.length; i<len; ++i ){
+      
+		  if ( pungleJSON.store[i].domain == value && pungleJSON.store[i].live == true ) { 
+		    log("EX:: getMerchantID => ID:" + pungleJSON.store[i].id + ", URL: " + value);
+		    return i;
+	    }
+		  
+		}
+		
+    return false;
   },
   
   // THIS DOES WHAT? Simply return the cause name
@@ -350,58 +360,67 @@ function pungleExtension() {
     return WCR_cause_name;
   },
   
-  // THIS DOES WHAT? Set the cause name in this object and in localStorage
+  // Set the cause name in this object and in localStorage
   this.setCauseName = function (cause) {
     setItem("cause_name", cause);
     WCR_cause_name = cause;
   },
   
-  // THIS DOES WHAT? Set the subdomain in this object and localStorage
-  this.setSubdomain = function (subdom) {
+  // Obsolete: Set the subdomain in this object and localStorage
+  /* this.setSubdomain = function (subdom) {
     subdom = subdom.toString().trim();
     setItem("subdomain", subdom);
     WCR_subdom = "&subdom=" + subdom;
-  },
+  }, */
   
-  // THIS DOES WHAT? Getter for subdomain
-  this.getSubdomain = function () {
+  // Obsolete: Getter for subdomain
+  /* this.getSubdomain = function () {
     return WCR_subdom;
-  },
+  }, */
   
-  // THIS DOES WHAT? Returns and creates a logo url for the current subdomain
-  this.getLogoURL = function () {
+  // Returns and creates a logo .. don't really need this 
+  /* this.getLogoURL = function () {
     return "http://" + getItem("subdomain") + ".we-care.com/logo.bmp?small=true";
-  },
+  }, */
   
   // Tests if the merchant exists for the URL (value)
   this.exists = function (value) {
-    value = value.toLowerCase();
-    var noWWW = removeWWW(value);
-    var no = (typeof WCR_MerchantArray[noWWW] != "undefined") ? true : false;
-    var retval = (typeof WCR_MerchantArray[value] != "undefined") ? true : false;
-    if (retval || no) {
-      return true;
-    }
-    return false;
+    value = removeWWW(value.toLowerCase());
+    
+    for ( var i=0, len=pungleJSON.store.length; i<len; ++i ){
+      
+		  if ( pungleJSON.store[i].domain == value && pungleJSON.store[i].live == true ) { 
+		    log("EX:: Live Vendor Exists => NAME: " + pungleJSON.store[i].name);
+		    return true;
+	    }
+		  
+		}
+		
+		// Else vendor not found.
+    return false;    
   },
   
   // Did we already go here URL (value)
   this.wasVisited = function (value) {
-    if (pXtn_VistedHash[value] == 1) {
+    if (pXtn_visitedHash[value] == 1) {
+      log("EX:: User has already visited: " + value);
       return true;
     }
+    log("EX:: User's first visit: " + value);
     return false;
   },
   
   // Mark this URL as visited
   this.setVisited = function (value) {
-    pXtn_VistedHash[value] = 1;
+    pXtn_visitedHash[value] = 1;
+    log("EX:: setVisited => TRUE: " + value);
   },
   
   // Return Affiliate Store Link by ID for Referral Process
-  this.affiliateLink = function (WCR_TO, accpt) {
-    log("Sending Information For " + WCR_TO);
-    if (!WCR_informationSent[WCR_TO]) {
+  this.affiliateLink = function (merchant_ID, cause_ID) {
+    log("EX:: Building Link => Vendor ID: " + merchant_ID + ", Cause ID: " + cause_ID);
+    
+    /* if (!WCR_informationSent[WCR_TO]) {
       WCR_informationSent[WCR_TO] = false;
     }
     var views = 0,
@@ -414,11 +433,11 @@ function pungleExtension() {
       }
       var plugin_id = "?secure_id=" + WCR_plugin_id;
       var subdom = getItem("subdomain");
-
+      
       if (subdom != null && subdom != '') {
         subdom = "&plugin_subdom=" + subdom;
       }
-
+      
       WCR_accepts = this.incrementClicks("num_accepts");
       var ltvid = "";
       if (WCR_ltvid != "") {
@@ -429,30 +448,34 @@ function pungleExtension() {
         url = "http://plugin.we-care.com/Redirect/" + "Store/" + WCR_TO + plugin_id + subdom + '&plugin_type=' + __plugin_type + '&async=true' + ltvid + '&readonly=' + WCR_readonly;
         WCR_informationSent[WCR_TO] = true;
       }
-    }
-    return url;
+    } */
+    var referralURL = "http://pungle.me/inject/#id=" + pungleJSON.store[merchant_ID].id + "&c=" + cause_ID;
+    log("EX:: Returning => Link: " + referralURL);
+    
+    return referralURL;
   }, //end send information
   
-  // THIS DOES WHAT? Increment the click counter based on key
-  this.incrementClicks = function (key) {
+  // Obsolete: Increment the click counter based on key
+  /* this.incrementClicks = function (key) {
     var num = Number(getIntItem(key));
     num++;
     setItem(key, num);
     return num;
-  },
+  }, */
   
-  // THIS DOES WHAT? Close the redirect handle (tab id) ???? @deprecated
-  this.closeRedirect = function (url) {
+  // Obsolete: Close the redirect handle (tab id) ???? @deprecated
+  /* this.closeRedirect = function (url) {
     chrome.tabs.remove(WCR_redirectHandle[url]);
     // WCR_redirectHandle[url].close();
-  },
+  }, */
   
-  // THIS DOES WHAT? Enable/Disable (flag) slider redirection on URL
+  // Enable/Disable (flag) slider redirection on URL
   this.setRedirect = function (url, flag) {
     pXtn_redirectArray[url] = flag;
+    log("EX:: setRedirect => " + flag + ": " + url);
   },
   
-  // THIS DOES WHAT? Can the slider redirect? (URL)
+  // Ask if it's OK for content script to redirect? (URL)
   this.isRedirect = function (url) {
     return pXtn_redirectArray[url];
   },
@@ -460,6 +483,7 @@ function pungleExtension() {
   // Set the redirect as having run for this URL.
   this.redirectRun = function (url) {
     pXtn_redirectRun[url] = true;
+    log("EX:: redirectRun => TRUE:" + url);
   },
   
   // Has the redirect run for this URL?
