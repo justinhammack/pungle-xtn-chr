@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Pungle.ME Social Good Negotiator</title>
+    <meta name="description" content="Popup Window for Chrome Extension" />
+    <meta name="author" content="Justin Hammack" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
+    
+    <script src="scripts/functions.js" type="text/javascript"></script>
+    <script src="scripts/jquery.min.js" type="text/javascript"></script>
+    
+    <style type="text/css">
+      body { width: 194px; }
+      body, select, input, textarea { 
+        color: #444;        
+        font: 16px/24px "helvetica neue", Helvetica, Arial, Verdana, sans-serif;
+      }
+      h2 { margin: 15px 0 10px; }
+      
+      a, a:active, a:visited { outline: none; color: #38B2FF; text-decoration: none; }
+      a:hover { outline: none; color: #87CFFF; text-decoration: none; }
+      a:link { -webkit-tap-highlight-color: #38B2FF; }
+      
+      small { font:13px/1.231 arial,helvetica,clean,sans-serif; }
+      
+      .align_right    { text-align:right;}
+      .align_left     { text-align:left;}
+      .align_center   { text-align:center;}
+      .align_justify  { text-align:justify;}
+      
+      ul, li {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+      }
+      ul { list-style: none; }
+      li { 
+        background: #FFFFFF url('images/ca_gradient1x46.png') repeat-x;
+        border: 1px solid #BBB;
+        border-bottom: none;
+        padding: 11px 15px;
+        line-height: 24px;
+        display: inline-block;
+        position: relative;
+        margin: 0 5px;
+        text-decoration: none !important;
+        cursor: pointer;
+        text-align: left;
+        zoom: 1;
+        overflow: visible;
+        width: 150px;
+      }
+      li:first-child {
+        -moz-border-radius-topleft: 6px;
+        -webkit-border-top-left-radius: 6px;
+        border-top-left-radius: 6px;
+        -moz-border-radius-topright: 6px;
+        -webkit-border-top-right-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+      li:last-child {
+        border-bottom: 1px solid #BBB;
+        -moz-border-radius-bottomright: 6px;
+        -webkit-border-bottom-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        -moz-border-radius-bottomleft: 6px;
+        -webkit-border-bottom-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+      li:hover { background: #E6E6E6; }
+      
+      .radioEMPicon, .radioPOTicon, .radioTECicon, .radioNATicon, .radioEDUicon, .radioVACicon, .radioCLEicon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        text-indent: -999999px;
+      }
+      
+      .radioEMPicon { background: url('images/ca_emp_ico24x24.png') -24px 0 no-repeat; }
+      .radioPOTicon { background: url('images/ca_water_ico24x24.png') -24px 0 no-repeat; }
+      .radioTECicon { background: url('images/ca_tech_ico24x24.png') -24px 0 no-repeat; }
+      .radioNATicon { background: url('images/ca_nature_ico24x24.png') -24px 0 no-repeat; }
+      .radioEDUicon { background: url('images/ca_edu_ico24x24.png') -24px 0 no-repeat; }
+      .radioVACicon { background: url('images/ca_vacc_ico24x24.png') -24px 0 no-repeat; }
+      .radioCLEicon { background: url('images/ca_energy_ico24x24.png') -24px 0 no-repeat; }
+      
+      li:hover .radioEMPicon, .ui-state-active .radioEMPicon { background: url('images/ca_emp_ico24x24.png') 0 0 no-repeat; }
+      li:hover .radioPOTicon, .ui-state-active .radioPOTicon { background: url('images/ca_water_ico24x24.png') 0 0 no-repeat; }
+      li:hover .radioTECicon, .ui-state-active .radioTECicon { background: url('images/ca_tech_ico24x24.png') 0 0 no-repeat; }
+      li:hover .radioNATicon, .ui-state-active .radioNATicon { background: url('images/ca_nature_ico24x24.png') 0 0 no-repeat; }
+      li:hover .radioEDUicon, .ui-state-active .radioEDUicon { background: url('images/ca_edu_ico24x24.png') 0 0 no-repeat; }
+      li:hover .radioVACicon, .ui-state-active .radioVACicon { background: url('images/ca_vacc_ico24x24.png') 0 0 no-repeat; }
+      li:hover .radioCLEicon, .ui-state-active .radioCLEicon { background: url('images/ca_energy_ico24x24.png') 0 0 no-repeat; }
+      
+      li:hover.ui-state-active, .ui-state-active {
+        background: white;
+        -webkit-box-shadow: inset 1px 1px 3px 0px #d6d6d6;
+        -moz-box-shadow: inset 1px 1px 3px 0px #d6d6d6;
+        box-shadow: inset 1px 1px 3px 0px #d6d6d6;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- <nav>
+        <p>
+          <a href="/">Home</a>
+        </p>
+        <p>
+          <a href="/contact">Visit Pungle</a>
+        </p>
+      </nav> -->
+      <div class="align_center">
+        <h2>Your Cause</h2>
+        <ul>
+          <li id="cause_0" title="Create social enterprises that strengthen developing communities."><div class="radioEMPicon">EMP</div>Empowerment</li>
+          <li id="cause_1" title="Provide clean water as a basic human right."><div class="radioPOTicon">POT</div>Potable Water</li>
+          <li id="cause_2" title="Support development of life changing technologies."><div class="radioTECicon">TEC</div>Technology</li>
+          <li id="cause_3" title="Preserve plants, animals and natural ecosystems."><div class="radioNATicon">NAT</div>Nature</li>
+          <li id="cause_4" title="Create opportunities for American students to succeed."><div class="radioEDUicon">EDU</div>Education</li>
+          <li id="cause_5" title="Stop the spread of life threatening diseases."><div class="radioVACicon">VAC</div>Vaccinations</li>
+          <li id="cause_6" title="Offset carbon emissions."><div class="radioCLEicon">CLE</div>Clean Energy</li>
+        </ul>
+      </div>
+      <footer>
+        <p class="align_center">
+          <small><a href="http://pungle.me/cause-portfolio/" title="Review Causes & Progress" target="_blank">See Results > pungle.me</a></small>
+          <!-- <small>&copy; pungle.me</small> -->
+        </p>
+      </footer>
+    </div>
+    
+    <script type="text/javascript">
+	    $(document).ready(function(){
+	        
+	        userCause = getIntItem("causeID");
+	        $("#cause_" + userCause).addClass('ui-state-active');
+	        
+	        // alert(userCause);
+	        
+	        $("#cause_0").click(function() {
+	          $("li").removeClass('ui-state-active');
+	          setItem("causeID", 0);
+	          $(this).addClass('ui-state-active');
+  	        window.close();
+  	      });          
+          
+          $("#cause_1").click(function() {
+	          $("li").removeClass('ui-state-active');
+	          setItem("causeID", 1);
+	          $(this).addClass('ui-state-active');
+	          window.close();
+	        });
+	        
+	        $("#cause_2").click(function() {
+	          $("li").removeClass('ui-state-active');
+	          setItem("causeID", 2);
+	          $(this).addClass('ui-state-active');
+	          window.close();
+	        });
+	        
+	        $("#cause_3").click(function() {
+	          $("li").removeClass('ui-state-active');
+	          setItem("causeID", 3);
+	          $(this).addClass('ui-state-active');
+	          window.close();
+	        });
+	        
+	        $("#cause_4").click(function() {
+	          $("li").removeClass('ui-state-active');
+	          setItem("causeID", 4);
+	          $(this).addClass('ui-state-active');
+	          window.close();
+	        });
+	        
+	        $("#cause_5").click(function() {
+	          $("li").removeClass('ui-state-active');
+	          setItem("causeID", 5);
+	          $(this).addClass('ui-state-active');
+	          window.close();
+	        });
+	        
+	        $("#cause_6").click(function() {
+	          $("li").removeClass('ui-state-active');
+	          setItem("causeID", 6);
+	          $(this).addClass('ui-state-active');
+	          window.close();
+	        });
+	    });	    
+	  </script>
+	
+  </body>
+</html>

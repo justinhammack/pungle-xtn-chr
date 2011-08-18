@@ -1,7 +1,7 @@
 /*
-  *-----------------------
-  *   Utility Functions
-  *-----------------------
+*---------------------
+* Utility Functions
+*---------------------
 */
 
 // Query localStorage by key.
@@ -72,20 +72,6 @@ function removeWWW(url) {
 }
 
 
-// Format date object into year, month, day String
-function formatDate(date){
-  var year = new String(date.getYear() + 1900);
-  var month = new String(date.getMonth()+1);
-  var day = new String(date.getDate());
-  
-  if(month.length == 1) month = "0" + month;
-  
-  if(day.length == 1 ) day = "0" + day;
-  
-  return year+"-"+month+"-"+day;	
-}
-
-
 // Strips the protocol and trailing slash from the URL leaving the domain.
 // ie http://www.amazon.com/Products -> www.amazon.com
 function cleanURL(url){
@@ -95,8 +81,6 @@ function cleanURL(url){
   url = url.replace("https://", "");
   url = url.substring(0, url.indexOf('/'));
   
-  // log("Clean URL: " + url);
-  
   return url;
 }
 
@@ -104,7 +88,7 @@ function cleanURL(url){
 // This method sends the redirect message to a specific tab on 'port' telling the content-script to run the redirect.
 function sendRedirectMessage(port, url) {
   if (!port) {
-    log("REDIRECT ERROR: PORT NOT FOUND!");
+    log("TL:: ERROR: PORT NOT FOUND!");
     return;
   }
   
@@ -112,7 +96,7 @@ function sendRedirectMessage(port, url) {
   
   if (flag && !pXtn.hasRedirectRun(cleanURL(url))) {
     // We are clear to redirect and has not run before this call.
-    log("Extension => Redirect Request " + url);
+    log("TL:: CALL EX:: Redirect Request " + url);
     
     // Super scrubbed URL, just for good measure.
     var clean = cleanURL(url);
@@ -121,25 +105,18 @@ function sendRedirectMessage(port, url) {
     pXtn.redirectRun(clean);
     
     // Collect merchant & cause information.
-    var merchantName = "Amazon"; // pXtn.getMerchantName(clean);
-    var causeName = pXtn.getCauseName();
+    var merchantID = pXtn.getMerchantID(clean);
+    var causeID = pXtn.getCauseID();
     
-    // Don't need logo.. var logoURL = WCR.getLogoURL();
-    // Not passing coupons.. var couponStr = WCR.getMerchantCoupon(clean);
-    
-    log("Extension => Compiling Message for ID: " + merchantName);
+    log("EX:: Compiling Message for ID: " + merchantID);
     
     port.postMessage({
       response: "redirect",
-      merchant: merchantName,
-      // logo: logoURL,
-      // subdom: getItem("subdomain"),
-      cause: causeName
-      // earn: WCR.isEarnDonation(clean),
-      // coupon: couponStr
+      merchant: merchantID,
+      cause: causeID
     });
     
-    log("Redirect message sent.");
+    log("EX:: Redirect message sent.");
   }
 }
 

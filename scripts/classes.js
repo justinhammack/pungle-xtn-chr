@@ -1,62 +1,4 @@
 /*
-  *--------------------------------
-  *   Pungle Tab Url Watch Class
-  *--------------------------------
-*/
-function PTUWatch(inTab){
-  /*
-    * Previously WCStream // <-- wtf does this do? 
-    * This class creates and maintains a basic click-stream for each tab, where the click stream is defined by
-    * any URL that passes via the tab.onUpdated event listener.  This click stream will contain very basic information.
-    * 
-    * Each time a 'click' or URL is appended to the stream we look to see if it matches any of the affsrc variations.
-    * There is no need to test for amazon here because amazon's URL will contain the indicator. As soon as we see the
-    * affsrc the isAff boolean is set to true.  The object will continue to take on new 'clicks' until it has been cleared.
-    *
-    * For each new tabid a new WCStream object will be created.
-    *
-    * @param inTab : the numeric tab ID
-  */
-  
-  // declare scope variables
-  var tabid = inTab; // holds the passed variable
-  var clicks = new Array(); // A 0-index array of URLs in the stream 
-  // Bad Code .. Hardly worth it: isAff = false; // Flag to indicate click-stream belongs to another affialiate 
-  var clickIndex = 0; // Current Index in 'clicks' array.
-  
-  // Append a new URL or click to the stream, @param url - the new URL to append.
-  this.appendClick = function (url) {
-    if (clickIndex == 0) {
-      log("TL:: First URL for Tab ID: " + tabid);
-    }
-    
-    clicks[clickIndex++] = url;
-    
-    /* if (url.match(".*affsrc=.*") || url.match(".*aff=.*") || url.match(".*afsrc=.*")) {
-      // isAff = true;
-      log("TabID " + tabid + " isAff true. (" + url + ")");
-    } */
-  },
-  
-  /* disabled.. 
-  // Get isAff 
-  this.isClickThru = function () {
-    return isAff;
-  },
-  */
-  
-  // This method resets this object
-  this.clearStream = function () {
-    clicks = new Array();
-    clickIndex = 0;
-    // isAff = false;
-    completeCount = 0;
-    log("TL:: Clear Link Array => Tab ID: " + tabid);
-  }
-} //end PTUWatch 
-
-
-/*
   *----------------------------
   *   Pungle Extension Class
   *----------------------------
@@ -76,327 +18,50 @@ function pungleExtension() {
   // Array used to flag the key (url) as allowing the extension to redirect.
   var pXtn_redirectArray = new Array();
   
-  /*
-  var pXtn_MerchantArray;   // Hash of all merchants
+  // Clean String cause name
+  var pXtn_cause_id;
   
-  var pXtn_ClickHash;       // Hash array of all click-thru links, used to test if a item in the click-stream is an affiliate click-thru
-  
-  var pXtn_version;         // Plugin version returned from Update call
-  
-  var pXtn_plugin_id;       // This plugin's secure ID
-  
-  var pXtn_subdom;          // Current Cause subdomain
-  
-  var pXtn_ltvid;            // The vintage of this plugin
-  
-  var pXtn_readonly;         // Flag indicates if the cause can be changed
-  
-  var pXtn_views;            // Count of page views
-  
-  var pXtn_accepts;          // Count of redirect accepts
-  
-  var pXtn_declines;         // Count of redirect declines
-  
-  var pXtn_cause_name;       // Clean String cause name
-  
-  var pXtn_wasUpdated;       // Last update date
-  
-  var pXtn_redirectHandle;   // Array of redirect handles (tab ids)
-  
-  var pXtn_informationSent;  // Array hash contains URL as keys and boolean values for flagged information
-  
-  var pXtn_logo;             // WTF do we need this for?
-  */
-  
-  
-  /*
-  * Methods Declared 
-  */
-  
-  // Updates the Merchant Hash List -- we don't need this shit
-  /*
-  this.updateMerchantHash = function () {
-    pXtn_visitedHash = new Array();
-    var lastUpdate = getItem("lastUpdHash");
-    var dd = lastUpdate.split("-");
-    var updMonth = dd[1];
-    var updDay = dd[2];
-    var updYear = dd[0];
-    lastUpdate = updYear + updMonth + updDay;
-    WCR_informationSent = new Array();
-    WCR_redirectArray = new Array();
-    WCR_sliderFired = new Array();
-    WCR_redirectHandle = new Array();
-    pXtn_passThru = new Array();
-    WCR_wasUpdated = false;
-    WCR_version = getItem("version");
-    WCR_cause_name = getItem("cause_name");
-    
-    if (VERSION != WCR_version) {
-      setItem("version", VERSION);
-    }
-    
-    WCR_plugin_id = getItem("secureId");
-    if (WCR_plugin_id == "") {
-      WCR_plugin_id = "0";
-    }
-    WCR_plugin_id = "&id=" + WCR_plugin_id;
-    
-    WCR_subdom = getItem("subdomain");
-    if (WCR_subdom == "") {
-      WCR_subdom = "0";
-      lastUpdate = "00000000000000";
-    }
-    
-    WCR_subdom = "&subdom=" + WCR_subdom;
-    
-    WCR_ltvid = getItem("ltvid");
-    WCR_views = getIntItem("btnviews");
-    WCR_accepts = getIntItem("num_accepts");
-    WCR_declines = getIntItem("num_declines");
-    
-    var WCR_clicks = "&clicks=" + WCR_views + ":" + WCR_accepts + ":" + WCR_declines;
-    
-    WCR_readonly = getItem("readonly");
-    var self = this;
-    var url = "http://plugin.we-care.com/UpdatePlugin.php?lastUpd=" + lastUpdate + "&version=" + WCR_version + WCR_plugin_id + WCR_subdom + WCR_clicks + '&plugin_type=' + __plugin_type + '&autoclk=true&ltvid=' + WCR_ltvid + '&readonly=' + WCR_readonly;
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", url, true);
-    xmlHttp.onreadystatechange = function (e) {
-      if (xmlHttp.readyState == 4) {
-        if (xmlHttp.status == 200) {
-          var data = xmlHttp.responseText;
-          WCR_cause_name = xmlHttp.getResponseHeader('Cause-Name');
-          if (WCR_cause_name != "" && WCR_cause_name != "undefined") {
-            if (WCR_cause_name == "blank000") {
-              log("setting cause name to null");
-              setItem("cause_name", "");
-              WCR_cause_name = "";
-            }
-            else {
-              setItem("cause_name", WCR_cause_name);
-            }
-            
-            log("Cause Name: " + getItem("cause_name"));
-          } //end if WCR_cause_name
-          if (xmlHttp.getResponseHeader('Update-Needed') == 'Yes') {
-            //check if response data contains valid domains (Ask bryan about this??)
-            if (data.search(";") < 30) {
-              //change all line breaks into this delimeter '::'
-              data = data.replace(/\n/g, "::");
-              log("Setting domainHash");
-              setItem("domainHash", data);
-              self.createLocalHash(data);
-              var WCR_date = new Date();
-              setItem("lastUpdHash", formatDate(WCR_date));
-            }
-          } //end if Update-Needed
-          else {
-            self.createLocalHash(getItem("domainHash"));
-          }
-          //get a plugin Id if required
-          if (xmlHttp.getResponseHeader("X-Plugin-Id") != null) {
-            var id = xmlHttp.getResponseHeader("X-Plugin-Id");
-            setItem("secureId", id);
-          }
-          
-          //get the subdomain
-          if (xmlHttp.getResponseHeader('X-Subdomain') != null) {
-            var subdom = xmlHttp.getResponseHeader('X-Subdomain');
-            setItem("subdomain", subdom);
-            WCR_subdom = "&subdom=" + subdom;
-            log("Subdomain: " + getItem("subdomain"));
-            
-            if (getItem("subdomain") != "") {
-              //cache image
-              self.cacheImage(self.getLogoURL());
-            }
-            else {
-              log("unable to cache image!");
-            }
-          }
-        }
-      }
-    }; //end on ready state change
-    xmlHttp.send(null);
-    WCR_wasUpdated = true;
-  }, //end updateMerchantHash
-  /*
-  
-  // THIS DOES WHAT? 
-  this.cacheImage = function (url) {
-    log("Caching Image " + url);
-    var imageCache = new Image(60, 44);
-    imageCache.src = url;
-    log(imageCache.src);
-    WCR_logo = url;
-  },
-  
-  // THIS DOES WHAT? 
-  this.createLocalHash = function (hashData) {
-    WCR_MerchantArray = new Array();
-    WCR_ClickHash = new Array();
-    hashData = hashData.split("::");
-    var hashcount = 0;
-    for (var i = 0; i < hashData.length; i++) {
-      var line = hashData[i];
-      if (line.indexOf("@") == 0) {
-        var arrLine = line.split(":");
-        if (arrLine[0].trim != "" && arrLine[1].trim != "") {
-          var clickthru = arrLine[0].substring(1, arrLine[0].length);
-          WCR_ClickHash[clickthru] = arrLine[1];
-          hashcount = hashcount + 1;
-        }
-      }
-      else if (line.indexOf(";") >= 0) {
-        var arrLine = line.split(";");
-        if (arrLine[0].trim != "" && arrLine[1].trim != "" && arrLine[2].trim != "" && arrLine[3].trim != "") {
-          WCR_MerchantArray[arrLine[0]] = new Array(3);
-          WCR_MerchantArray[arrLine[0]][0] = arrLine[1];
-          WCR_MerchantArray[arrLine[0]][1] = arrLine[2];
-          WCR_MerchantArray[arrLine[0]][2] = arrLine[3];
-          hashcount += 1;
-        }
-        //we have coupon data!
-        if (arrLine.length > 4) {
-          WCR_MerchantArray[arrLine[0]][3] = arrLine[4]; //description
-          WCR_MerchantArray[arrLine[0]][4] = arrLine[5]; //coupon code
-          log(arrLine[1] + " -> Adding Coupon Data: " + arrLine[4] + " -> " + arrLine[5]);
-        }
-      }
-    } //end for i loop
-  },
-  
-  // THIS DOES WHAT?
-  /* 
-  this.initLtvid = function () {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function (e) {
-      if (xhr.readyState == 4) {
-        if (xhr.responseText != "") {
-          var resp = JSON.parse(xhr.responseText);
-          if (resp) {
-            setItem("ltvid", resp.ltvid);
-            WCR_ltvid = resp.ltvid;
-            log("LTVID JSON:: " + resp.ltvid + "  " + resp.subdomain);
-            setItem("subdomain", resp.subdomain);
-            WCR_subdom = "&subdom=" + resp.subdomain;
-            setItem("readonly", "1");
-            READ_ONLY = 1;
-          }
-        }
-      }
-    };
-    try {
-      var url = chrome.extension.getURL("ltvid.json");
-      xhr.open("GET", url, true);
-      xhr.send();
-    }
-    catch (e) {
-      log("no ltvid file");
-    }
-  }, //end initLtvid
-  */
-  
-  // Obsolete: Flag this URL as having already passed through Pungl.me site injector.
-  /* this.flagPungleRedirect = function (merchant) {
-    pXtn_passThru[merchant] = 1;
-  }, */
-  
-  // Obsolete: Check if already flagged as redirected by Pungle.me site injector.
-  /* this.isRedirectFlagged = function (merchant) {
-    return pXtn_passThru[merchant];
-  }, */
-  
-  // THIS DOES WHAT? Getter, test if url was clickthrough
-  /* Obsolete: this.isClickThru = function (url) {
-    return WCR_ClickHash[url] == 1 ? true : false;
-  }, /*
-  
-  // THIS DOES WHAT? Determine if merchant requires the Earn Donation button.
-  /* this.isEarnDonation = function (value) {
-    value = removeWWW(value.toLowerCase());
-    var retval = WCR_MerchantArray[value][2];
-    if (!retval) {
-      retval = WCR_MerchantArray[value.toLowerCase()][2];
-    }
-    return retval == 1 ? false : true;
-  }, */
+
+  // Methods Declared 
   
   // Get the merchant name for URL (value)
   this.getMerchantName = function (value) {
     return pungleJSON.store[value].name;
   },
   
-  // THIS DOES WHAT? Get coupon information for the merchant
-  /* this.getMerchantCoupon = function (id) {
-    id = removeWWW(id.toLowerCase());
-    var couponStr = "";
-    if (WCR_MerchantArray[id].length > 4) {
-      couponStr = WCR_MerchantArray[id][3] + " use coupon code: <b>" + WCR_MerchantArray[id][4] + "</b>";
-    }
-    return couponStr;
-  }, */
-  
   // Get the merchant ID for URL
   this.getMerchantID = function (value) {
-    // clear to absolute domain
     value = removeWWW(value.toLowerCase());
     
     for ( var i=0, len=pungleJSON.store.length; i<len; ++i ){
-      
 		  if ( pungleJSON.store[i].domain == value && pungleJSON.store[i].live == true ) { 
 		    log("EX:: getMerchantID => ID:" + pungleJSON.store[i].id + ", URL: " + value);
-		    return i;
+		    return pungleJSON.store[i].id;
 	    }
-		  
 		}
 		
     return false;
   },
   
-  // THIS DOES WHAT? Simply return the cause name
-  this.getCauseName = function () {
-    return WCR_cause_name;
+  // Simply return the cause name
+  this.getCauseID = function () {
+    if(getItem == "") return 0;
+    else return getItem("causeID");
   },
-  
-  // Set the cause name in this object and in localStorage
-  this.setCauseName = function (cause) {
-    setItem("cause_name", cause);
-    WCR_cause_name = cause;
-  },
-  
-  // Obsolete: Set the subdomain in this object and localStorage
-  /* this.setSubdomain = function (subdom) {
-    subdom = subdom.toString().trim();
-    setItem("subdomain", subdom);
-    WCR_subdom = "&subdom=" + subdom;
-  }, */
-  
-  // Obsolete: Getter for subdomain
-  /* this.getSubdomain = function () {
-    return WCR_subdom;
-  }, */
-  
-  // Returns and creates a logo .. don't really need this 
-  /* this.getLogoURL = function () {
-    return "http://" + getItem("subdomain") + ".we-care.com/logo.bmp?small=true";
-  }, */
   
   // Tests if the merchant exists for the URL (value)
   this.exists = function (value) {
     value = removeWWW(value.toLowerCase());
     
     for ( var i=0, len=pungleJSON.store.length; i<len; ++i ){
-      
 		  if ( pungleJSON.store[i].domain == value && pungleJSON.store[i].live == true ) { 
 		    log("EX:: Live Vendor Exists => NAME: " + pungleJSON.store[i].name);
 		    return true;
 	    }
-		  
 		}
 		
 		// Else vendor not found.
+		log("EX:: Does Not Exist => DOMAIN: " + value);
     return false;    
   },
   
@@ -418,61 +83,15 @@ function pungleExtension() {
   
   // Return Affiliate Store Link by ID for Referral Process
   this.affiliateLink = function (merchant_ID, cause_ID) {
-    log("EX:: Building Link => Vendor ID: " + merchant_ID + ", Cause ID: " + cause_ID);
-    
-    /* if (!WCR_informationSent[WCR_TO]) {
-      WCR_informationSent[WCR_TO] = false;
-    }
-    var views = 0,
-      accepts = 0,
-      declines = 0;
-    if (accpt) {
-      WCR_plugin_id = getItem("secureId");
-      if (WCR_plugin_id == "") {
-        WCR_plugin_id = "0";
-      }
-      var plugin_id = "?secure_id=" + WCR_plugin_id;
-      var subdom = getItem("subdomain");
-      
-      if (subdom != null && subdom != '') {
-        subdom = "&plugin_subdom=" + subdom;
-      }
-      
-      WCR_accepts = this.incrementClicks("num_accepts");
-      var ltvid = "";
-      if (WCR_ltvid != "") {
-        ltvid = "&ltvid=" + WCR_ltvid;
-      }
-      var url = '';
-      if (!WCR_informationSent[WCR_TO]) {
-        url = "http://plugin.we-care.com/Redirect/" + "Store/" + WCR_TO + plugin_id + subdom + '&plugin_type=' + __plugin_type + '&async=true' + ltvid + '&readonly=' + WCR_readonly;
-        WCR_informationSent[WCR_TO] = true;
-      }
-    } */
-    var referralURL = "http://pungle.me/inject/#id=" + pungleJSON.store[merchant_ID].id + "&c=" + cause_ID;
-    log("EX:: Returning => Link: " + referralURL);
-    
+    var referralURL = "http://pungle.me/inject/#id=" + merchant_ID + "&c=" + cause_ID;
+    log("EX:: Returning => Link: " + referralURL);    
     return referralURL;
-  }, //end send information
-  
-  // Obsolete: Increment the click counter based on key
-  /* this.incrementClicks = function (key) {
-    var num = Number(getIntItem(key));
-    num++;
-    setItem(key, num);
-    return num;
-  }, */
-  
-  // Obsolete: Close the redirect handle (tab id) ???? @deprecated
-  /* this.closeRedirect = function (url) {
-    chrome.tabs.remove(WCR_redirectHandle[url]);
-    // WCR_redirectHandle[url].close();
-  }, */
+  },
   
   // Enable/Disable (flag) slider redirection on URL
   this.setRedirect = function (url, flag) {
     pXtn_redirectArray[url] = flag;
-    log("EX:: setRedirect => " + flag + ": " + url);
+    // only called by TL.. log("EX:: setRedirect => " + flag + ": " + url);
   },
   
   // Ask if it's OK for content script to redirect? (URL)
@@ -483,11 +102,84 @@ function pungleExtension() {
   // Set the redirect as having run for this URL.
   this.redirectRun = function (url) {
     pXtn_redirectRun[url] = true;
-    log("EX:: redirectRun => TRUE:" + url);
+    log("EX:: redirectRun => TRUE: " + url);
   },
   
   // Has the redirect run for this URL?
   this.hasRedirectRun = function (url) {
     return pXtn_redirectRun[url];
   }
+  
+  // HOLD: Flag this URL as having already passed through Pungl.me site injector.
+  /* this.flagPungleRedirect = function (merchant) {
+    pXtn_passThru[merchant] = 1;
+  }, */
+  
+  // HOLD: Check if already flagged as redirected by Pungle.me site injector.
+  /* this.isRedirectFlagged = function (merchant) {
+    return pXtn_passThru[merchant];
+  }, */
+  
+  // OBSOLETE - set in popup.. Set the cause name in this object and in localStorage
+  /* this.setCauseID = function (cause) {
+    setItem("causeID", cause);
+    pXtn_cause_id = cause;
+  }, */
+  
 } // CLOSE pungleExtension Object
+
+
+/*
+  *--------------------------------
+  *   Pungle Tab Url Watch Class
+  *--------------------------------
+*/
+// function PTUWatch(inTab){
+  /*
+    * This class creates and maintains a basic click-stream for each tab, where the click stream is defined by
+    * any URL that passes via the tab.onUpdated event listener.  This click stream will contain very basic information.
+    * 
+    * Each time a 'click' or URL is appended to the stream we look to see if it matches any other affiliate variations.
+    * There is no need to test for amazon here because amazon's URL will contain the indicator. As soon as we see the
+    * affsrc the isAff boolean is set to true.  The object will continue to take on new 'clicks' until it has been cleared.
+    *
+    * For each new tabid a new PUTWatch object will be created.
+    *
+    * @param inTab : the numeric tab ID
+  */
+  /*
+  // declare scope variables
+  var tabid = inTab; // holds the passed variable
+  var clicks = new Array(); // A 0-index array of URLs in the stream 
+  // Bad Code .. Hardly worth it: isAff = false; // Flag to indicate click-stream belongs to another affialiate 
+  var clickIndex = 0; // Current Index in 'clicks' array.
+  
+  // Append a new URL or click to the stream, @param url - the new URL to append.
+  this.appendClick = function (url) {
+    if (clickIndex == 0) {
+      log("TL:: First URL for Tab ID: " + tabid);
+    }
+    
+    clicks[clickIndex++] = url;
+    
+    if (url.match(".*affsrc=.*") || url.match(".*aff=.*") || url.match(".*afsrc=.*")) {
+      // isAff = true;
+      log("TabID " + tabid + " isAff true. (" + url + ")");
+    }
+  },
+  
+  disabled.. 
+  // Get isAff 
+  this.isClickThru = function () {
+    return isAff;
+  },  
+  
+  // This method resets this object
+  this.clearStream = function () {
+    clicks = new Array();
+    clickIndex = 0;
+    // isAff = false;
+    completeCount = 0;
+    log("TL:: Clear Link Array => Tab ID: " + tabid);
+  }
+} //end PTUWatch */

@@ -5,15 +5,11 @@
   <script src="http://localhost/core/pungleJSON.js" type="text/javascript"></script>
   <script>
   
-  // Copyright 2011 Pungle, LLC. All Rights Reserved.
-  
-  /*
+  /* 
   *-----------------------------------------------------------------------------
   * Description: Handles affiliate referrals transparently for user.
   * Author: note@pungle.me (Justin Hammack)
-  *
-  *   find all: // <-- wtf does this do? 
-  *
+  * Copyright 2011 Pungle, LLC. All Rights Reserved.
   *-----------------------------------------------------------------------------
   */
   
@@ -26,29 +22,16 @@
   var pXtn = new pungleExtension(); // Load pungle extension object.
   var VERSION = queryVersion(); // major.minor.build 
   var listenerBridge = new Array(); // Tracks the URL between messenger & tab listeners.
-  var tabMonitor = new Array(); // Array of tab ids by url mapped to PTUWatch class.
+  // HOLD: affiliate tracking .. var tabMonitor = new Array(); // Array of tab ids by url mapped to PTUWatch class.
   
   // Setup localStorage.
-  // log("VERSION: " + getItem("ltvid")); // <--- do we need this vintage cause/plugin bullshit, ltvid?
   log("Loading Pungle Extension: v" + VERSION);
   log("Initializing environment.");
   
   setIfEmpty("version", VERSION); // track version
+  setIfEmpty("causeID", 0); // set to default cause
   
-  // setItemIfEmpty("lastUpdHash", "0000-00-00"); // stores query local, don't need to poll for new stores
-  // setItemIfEmpty("readonly", "0"); // <-- is the cause json file writable?
-  // setItemIfEmpty("btnviews", "0"); // <-- counts number of button views for stores
-  // setItemIfEmpty("num_accepts", "0"); // <-- counts if they accept
-  // setItemIfEmpty("num_declines", "0"); // <-- counts if they decline
-  
-  // Global variables declared from localStorage.
-  // var READ_ONLY = getItem("readonly"); // <-- wtf does this do? 
-  
-  // Check merchant list.
-  // pXtn.updateMerchantHash(); // <-- wtf does this do? 
-  
-  // Adds trim method to string.
-  // Obsolete: String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g,""); }
+  // REF 01 
   
 
   /*
@@ -79,7 +62,7 @@
         if (flag && !pXtn.hasRedirectRun(cleanURL(msg.url))) { 
           // Check to make sure redirect called & it hasn't already run.
           
-          log("EX:: Redirect approved. Setting redirect as having run for URL.");
+          log("EX:: Redirect approved. Setting redirect as having run.");
           var clean = cleanURL(msg.url);
           
           // Set the redirect as having run for this URL.
@@ -90,23 +73,15 @@
           
           // Get the Merchant ID & the Cause ID.
           var merchantID = pXtn.getMerchantID(clean);
-          // var causeName = pXtn.getCauseName();          
-          var causeName = 0;
+          var causeID = pXtn.getCauseID();
           
-          log("EX:: set params => merchant: " + merchantID + ", cause: " + causeName);
-          
-          // var couponStr = WCR.getMerchantCoupon(clean);
-          // log("Got " + merchantName + " - > " + couponStr);
-          // var logoURL = WCR.getLogoURL();
+          log("EX:: set params => merchantID: " + merchantID + ", causeID: " + causeID);
           
           port.postMessage({ 
             response: "redirect",
-            merchant: merchantID,
-            // logo: logoURL,
-            // subdom: getItem("subdomain"),
-            cause: causeName
-            // earn: WCR.isEarnDonation(clean), // <-- require high five?
-            // coupon: couponStr
+            merchant: merchantID,            
+            cause: causeID
+            // earn: WCR.isEarnDonation(clean) // <-- require high five?            
           });
           
           log("EX:: sent => response: redirect");
@@ -120,11 +95,10 @@
         var url = msg.url;
         url = removeWWW(cleanURL(url));
         var merchantID = pXtn.getMerchantID(url);
-        var causeID = 0;
+        var causeID = pXtn.getCauseID();
         
         if (msg.query == "requestSend" || msg.query == "send") { 
-          // Allow automatic injection of referral link.
-          // removed condition:  && !WCR.isEarnDonation(url)
+          // Allow automatic injection of referral link.          
           
           var redirectURL = pXtn.affiliateLink(merchantID, causeID);
           
@@ -139,18 +113,7 @@
           
           log("EX:: User action required at: " + url);
         }
-      } /* else if (msg.action == "updateSubdom") { // <-- to update cause thinger
-        if (READ_ONLY == 0 || getItem("subdomain") == "") {
-          var sessionSubdom = msg.session;
-          var causeName = msg.cause;
-          
-          //test for session and cause name
-          log("Recieved Update Message From Slider " + sessionSubdom + " -- " + causeName);
-          WCR.setCauseName(causeName);
-          WCR.setSubdomain(sessionSubdom);
-          WCR.cacheImage(WCR.getLogoURL());
-        }
-      } */
+      } // REF 02 
     }); // end of port messenger listener 
   }); // end of onconnect listener
   
@@ -166,14 +129,10 @@
   */
   chrome.tabs.onUpdated.addListener(function (tabid, changeInfo, tab) {
     thisURL = changeInfo.url;
-    log("TL:: update => ID: " + tabid + " " + changeInfo.status + ", URL: " + thisURL);    
+    log("TL:: UPDATE => ID: " + tabid + " " + changeInfo.status + ", URL: " + thisURL);    
     // log("Tab Status: " + changeInfo.status);
     
-    // create new monitor if does not exist
-    if (typeof (tabMonitor[tabid]) == "undefined") {
-      tabMonitor[tabid] = new PTUWatch(tabid);
-      log("TL:: Create Tab Monitor");
-    } else log("TL:: Found Tab Monitor");
+    // REF 05 
     
     // where are we? pungle referral? prevents redirect capture
     /* if (typeof (thisURL) != "undefined") {
@@ -194,8 +153,8 @@
     
     thisURL = cleanURL(thisURL); // Clean off url protocol & path.
     
-    // Attach record of this URL to the Tab Monitor for reference.
-    if (typeof (changeInfo.url) != "undefined") tabMonitor[tabid].appendClick(changeInfo.url);
+    // HOLD: Attach record of this URL to the Tab Monitor for reference.
+    // if (typeof (changeInfo.url) != "undefined") tabMonitor[tabid].appendClick(changeInfo.url);
     
     var redirect = false; // Should we redirect? (assume false)
     var pXtn_dest = ""; // What store are we going to?
@@ -204,7 +163,7 @@
     if ( pXtn.exists(thisURL) && !pXtn.wasVisited(removeWWW(thisURL)) ) {
       // We must redirect, first time visit.
       
-      log("TL:: New session opened. SET redirect => true");
+      log("TL:: New session opened for possible redirect.");
       redirect = true;
       
       // Set as visited for session reference.
@@ -219,31 +178,21 @@
         redirect = false;
         log("TL:: User came from pungle. redirect => false");
       } */
-    } else log("TL:: Domain not found in database.");
+    }
     
-    /* Checks to see if user came from other affiliate, but code is inferior.
-    if (tabMonitor[tabid].isClickThru()) {
-      redirect = false;
-      //if the URL exists as a merchant and we have identified a clickthru,
-      //then clear the current stream to setup for the next round of requests.
-      if (typeof (thisURL) != "undefined" && WCR.exists(thisURL)) {
-        WCR.flagWeCareRedirect(WCR.getMerchantID(thisURL));
-        tabMonitor[tabid].clearStream();
-      }
-    } //end if ClickThru */
+    // REF 03    
     
-    // Check if Tab URL has completed loading and make sure redirect has run.
     if (changeInfo.status == "complete") {
-      /* if (!tabMonitor[tabid].isClickThru()) { NO LONGER CHECK FOR AFF REF */
+      // Check if Tab URL has completed loading and make sure redirect has run.  
       
       // Set to the tab's loaded URL.
       var tabUrl = cleanURL(tab.url);
       
       if (pXtn.hasRedirectRun(tabUrl)) {
-        log("TL:: Redirect has already run for: " + tabUrl);
+        log("TL:: Redirect has successfully run: " + tabUrl);
       } else {
         if (pXtn.isRedirect(tabUrl) || pXtn.isRedirect(removeWWW(tabUrl))) {
-          // log("TL:: Redirect has not run for: " + tabUrl);          
+          log("TL:: WARNING: Redirect has not run: " + tabUrl);          
           if (listenerBridge[tabUrl]) {
             // Set port when bridge found in array.
             var port = listenerBridge[tabUrl];
@@ -257,10 +206,6 @@
           }
         }
       }
-      /* CONTINUE.. NO LONGER CHECK FOR AFF REF 
-      else {
-        log("Found ClickThru In Stream!");
-      } */
       
       return; // to event dispatcher. No need to process any further.
     } // end if status = 'complete'
@@ -269,17 +214,11 @@
       return; //to event dispatcher.  No URL
     }
     
-    //check for affilate clickthru tags
-    /* checkURL = changeInfo.url;
-    checkURL = checkURL.toLowerCase();
-    if (checkURL.match(".*affsrc=.*") || checkURL.match(".*aff=.*") || checkURL.match(".*afsrc=.*") || checkURL.match(".*amazon.com.*tag=.*")) {
-      redirect = false;
-      log("Found ClickThru, not redirecting.");
-    } */
+    // REF 04 
     
     // Cleared all conditions, que URL to be redirected.
     if (changeInfo.status == "loading" && redirect) {
-      tabMonitor[tabid].clearStream();
+      // HOLD: tabMonitor[tabid].clearStream();
       log("TL:: Set Redirect => TRUE: " + thisURL);
       pXtn.setRedirect(thisURL, true);
     }
@@ -293,6 +232,62 @@
       chrome.tabs.create({url:redirectUrl, selected:true});
     }
   }); */
+  
+  
+  // REF 01 
+  // setItemIfEmpty("lastUpdHash", "0000-00-00"); // stores query local, don't need to poll for new stores
+  // setItemIfEmpty("readonly", "0"); // <-- is the cause json file writable?
+  // setItemIfEmpty("btnviews", "0"); // <-- counts number of button views for stores
+  // setItemIfEmpty("num_accepts", "0"); // <-- counts if they accept
+  // setItemIfEmpty("num_declines", "0"); // <-- counts if they decline
+  // Global variables declared from localStorage.
+  // var READ_ONLY = getItem("readonly"); // <-- wtf does this do? 
+  // Check merchant list.
+  // pXtn.updateMerchantHash(); // <-- wtf does this do? 
+  // Adds trim method to string.
+  // Obsolete: String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g,""); }
+  
+  // REF 02 
+  /* else if (msg.action == "updateSubdom") { // <-- to update cause thinger
+        if (READ_ONLY == 0 || getItem("subdomain") == "") {
+          var sessionSubdom = msg.session;
+          var causeName = msg.cause;
+          
+          //test for session and cause name
+          log("Recieved Update Message From Slider " + sessionSubdom + " -- " + causeName);
+          WCR.setCauseName(causeName);
+          WCR.setSubdomain(sessionSubdom);
+          WCR.cacheImage(WCR.getLogoURL());
+        }
+  } */
+  
+  // REF 03 
+  /* Checks to see if user came from other affiliate, but code is inferior.
+    if (tabMonitor[tabid].isClickThru()) {
+      redirect = false;
+      //if the URL exists as a merchant and we have identified a clickthru,
+      //then clear the current stream to setup for the next round of requests.
+      if (typeof (thisURL) != "undefined" && WCR.exists(thisURL)) {
+        WCR.flagWeCareRedirect(WCR.getMerchantID(thisURL));
+        tabMonitor[tabid].clearStream();
+      }
+  } //end if ClickThru */
+  
+  // REF 04 
+  //check for affilate clickthru tags
+    /* checkURL = changeInfo.url;
+    checkURL = checkURL.toLowerCase();
+    if (checkURL.match(".*affsrc=.*") || checkURL.match(".*aff=.*") || checkURL.match(".*afsrc=.*") || checkURL.match(".*amazon.com.*tag=.*")) {
+      redirect = false;
+      log("Found ClickThru, not redirecting.");
+  } */
+  
+  // REF 05 
+  /* // create new monitor to track for other affiliates
+    if (typeof (tabMonitor[tabid]) == "undefined") {
+      tabMonitor[tabid] = new PTUWatch(tabid);
+      log("TL:: Create Tab Monitor");
+  } else log("TL:: Found Tab Monitor"); */
   
   </script>
 </html>
