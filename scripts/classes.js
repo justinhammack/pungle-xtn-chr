@@ -35,7 +35,7 @@ function pungleExtension() {
     
     for ( var i=0, len=pungleJSON.store.length; i<len; ++i ){
 		  if ( pungleJSON.store[i].domain == value && pungleJSON.store[i].live == true ) { 
-		    log("EX:: getMerchantID => ID:" + pungleJSON.store[i].id + ", URL: " + value);
+		    // log("EX:: getMerchantID => ID:" + pungleJSON.store[i].id + ", URL: " + value);
 		    return pungleJSON.store[i].id;
 	    }
 		}
@@ -51,17 +51,21 @@ function pungleExtension() {
   
   // Tests if the merchant exists for the URL (value)
   this.exists = function (value) {
-    value = removeWWW(value.toLowerCase());
     
-    for ( var i=0, len=pungleJSON.store.length; i<len; ++i ){
-		  if ( pungleJSON.store[i].domain == value && pungleJSON.store[i].live == true ) { 
-		    log("EX:: Live Vendor Exists => NAME: " + pungleJSON.store[i].name);
-		    return true;
-	    }
-		}
-		
-		// Else vendor not found.
-		log("EX:: Does Not Exist => DOMAIN: " + value);
+    if (value!='undefined' && value!='' && value.toString().indexOf("chrome:") == -1) {
+      value = removeWWW(value.toLowerCase());
+      
+      for ( var i=0, len=pungleJSON.store.length; i<len; ++i ){
+  		  if ( pungleJSON.store[i].domain == value && pungleJSON.store[i].live == true ) { 
+  		    log("EX:: Live Vendor Exists => NAME: " + pungleJSON.store[i].name);
+  		    return true;
+  	    }
+  		}
+  		
+  		// Else vendor not found.
+  		log("EX:: Vendor Not Found => DOMAIN: " + value);
+  	}
+  	
     return false;    
   },
   
@@ -78,13 +82,13 @@ function pungleExtension() {
   // Mark this URL as visited
   this.setVisited = function (value) {
     pXtn_visitedHash[value] = 1;
-    log("EX:: setVisited => TRUE: " + value);
+    // log("EX:: setVisited => TRUE: " + value);
   },
   
   // Return Affiliate Store Link by ID for Referral Process
   this.affiliateLink = function (merchant_ID, cause_ID) {
     var referralURL = "http://pungle.me/inject/#id=" + merchant_ID + "&c=" + cause_ID;
-    log("EX:: Returning => Link: " + referralURL);    
+    // log("EX:: Returning => Link: " + referralURL);    
     return referralURL;
   },
   

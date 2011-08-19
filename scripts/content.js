@@ -71,4 +71,18 @@ if (pXtn_URL.search("pungle.me") == -1 && document.referrer.search("pungle.me") 
     url: pXtn_URL
   });
   console.log("CS:: sent => query: isRedirect");
-} else console.log("CS:: Pungle Referral");
+} else if (pXtn_URL.search("pungle.me") == -1 && document.referrer.search("pungle.me") != -1){
+  // Pungle Referral, Notify Extension
+ 
+  console.log("CS:: Pungle Referral");
+  
+  // create a port to connect to the extension
+  var port = chrome.extension.connect({ name: "punglePort" });
+  
+  // send our query to the extension.
+  port.postMessage({
+    query: "pungleReferral",
+    url: pXtn_URL
+  });
+}
+else console.log("CS:: Pungle.me Site");

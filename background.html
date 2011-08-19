@@ -62,20 +62,14 @@
         if (flag && !pXtn.hasRedirectRun(cleanURL(msg.url))) { 
           // Check to make sure redirect called & it hasn't already run.
           
-          log("EX:: Redirect approved. Setting redirect as having run.");
           var clean = cleanURL(msg.url);
           
           // Set the redirect as having run for this URL.
           pXtn.redirectRun(clean);
           
-          // Set the Icon to visible for this URL.
-          chrome.pageAction.show(port.sender.tab.id);
-          
           // Get the Merchant ID & the Cause ID.
           var merchantID = pXtn.getMerchantID(clean);
           var causeID = pXtn.getCauseID();
-          
-          log("EX:: set params => merchantID: " + merchantID + ", causeID: " + causeID);
           
           port.postMessage({ 
             response: "redirect",
@@ -84,8 +78,9 @@
             // earn: WCR.isEarnDonation(clean) // <-- require high five?            
           });
           
-          log("EX:: sent => response: redirect");
-        } else log("EX:: Redirect not flagged or has already run. No response sent.");
+          log("EX:: sent => response: redirect, merchantID: " + merchantID + ", causeID: " + causeID);
+        } else if (pXtn.hasRedirectRun(cleanURL(msg.url))) log("EX:: Redirect has already run. No response sent.");
+        else log("EX:: Redirect not flagged. No response sent.")
       } else if (msg.query == "send" || msg.query == "requestSend") { 
         // Prepare to send the content script the affiliate link.
         
@@ -113,7 +108,13 @@
           
           log("EX:: User action required at: " + url);
         }
-      } // REF 02 
+      } else if (msg.query == "pungleReferral") {
+        var refURL = cleanURL(msg.url);
+        pXtn.setVisited(refURL);
+        pXtn.setVisited(removeWWW(refURL));
+        pXtn.setRedirect(refURL);
+        log("EX:: STOP Pungle Referral => URL: " + refURL);
+      }// REF 02 
     }); // end of port messenger listener 
   }); // end of onconnect listener
   
@@ -129,7 +130,10 @@
   */
   chrome.tabs.onUpdated.addListener(function (tabid, changeInfo, tab) {
     thisURL = changeInfo.url;
-    log("TL:: UPDATE => ID: " + tabid + " " + changeInfo.status + ", URL: " + thisURL);    
+    
+    if (changeInfo.status == 'loading') log("TL:: UPDATE => ID: " + tabid + " " + changeInfo.status + ", newURL: " + thisURL);
+    else log("TL:: UPDATE => ID: " + tabid + " " + changeInfo.status);
+    
     // log("Tab Status: " + changeInfo.status);
     
     // REF 05 
@@ -160,11 +164,11 @@
     var pXtn_dest = ""; // What store are we going to?
     
     // Are we on a merchant page? 
-    if ( pXtn.exists(thisURL) && !pXtn.wasVisited(removeWWW(thisURL)) ) {
-      // We must redirect, first time visit.
+    if (typeof(changeInfo.url) != "undefined" && !pXtn.wasVisited(removeWWW(thisURL))) {
+      // Is this a vendor?  We must redirect, first time visit.
       
-      log("TL:: New session opened for possible redirect.");
-      redirect = true;
+      // log("TL:: New session opened for possible redirect.");
+      if (pXtn.exists(thisURL)) redirect = true;
       
       // Set as visited for session reference.
       pXtn.setVisited(thisURL);
@@ -189,7 +193,9 @@
       var tabUrl = cleanURL(tab.url);
       
       if (pXtn.hasRedirectRun(tabUrl)) {
-        log("TL:: Redirect has successfully run: " + tabUrl);
+        // Show the pungle icon
+        chrome.pageAction.show(tabid);
+        // log("TL:: Redirect has already run: " + tabUrl);
       } else {
         if (pXtn.isRedirect(tabUrl) || pXtn.isRedirect(removeWWW(tabUrl))) {
           log("TL:: WARNING: Redirect has not run: " + tabUrl);          
