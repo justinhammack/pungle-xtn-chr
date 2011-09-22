@@ -9,3 +9,4 @@
 6. Add appropriately versioned file
 7. Upload to server
 8. Test to verify extension updates correctly
+9. Update install path on pungle.me
