@@ -1,7 +1,8 @@
 {
   "name": "Pungle.ME - Social Good Negotiator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Support causes when you shop online. You're a winner!",  
+  "update_url": "http://pungle.me/extensions/updatechr.xml",
   "icons": {
     "16": "images/icon.png",
     "48": "images/pungle_plugicon48x48.png",
