@@ -1,2000 +1,1683 @@
 var pungleJSON = 
 { "store": [
 	{
-		"id": 78,
-		"tags": [9],
 		"name": "1-800 Baskets",
-		"domain": "",
-		"desc": "Gourmet gift baskets and food gifts for every occasion.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=185580.10000001&type=4&subid=0",
-		"img": "1800baskets.png",
-		"aff": true,
-		"live": true
+		"domain": "1800baskets.com",
+		"desc": "3%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=185580.10000001&type=4&subid=0"
 	},
 	{
-		"id": 77,
-		"tags": [9],
 		"name": "1-800 Flowers",
-    "domain": "",
-		"desc": "Order flowers, roses, gift baskets and more. Get same-day flower delivery for birthdays, anniversaries, and all other occasions.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=100462.10000286&type=3&subid=0",
-		"img": "1800flowers.png",
-		"aff": true,
-		"live": true
+		"domain": "1800flowers.com",
+		"desc": "3%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=100462.10000286&type=3&subid=0"
 	},
 	{
-		"id": 85,
-		"tags": [5],
+		"name": "1-800 Lighting",
+		"domain": "1800lighting.com",
+		"desc": "4%",
+		"link": "http://www.jdoqocy.com/click-4147908-10736186"
+	},
+	{
 		"name": "123 Inkjets",
-    "domain": "",
-		"desc": "A top supplier of discount ink cartridges and toner for nearly every model of inkjet and laser printer on the market today.",
-		"link": "http://www.dpbolvw.net/click-4147908-10790382",
-		"img": "123inkjets.png",
-		"aff": true,
-		"live": true
+		"domain": "123inkjets.com",
+		"desc": "2.5%-10%",
+		"link": "http://www.dpbolvw.net/click-4147908-10790382"
 	},
 	{
-		"id": 62,
-		"tags": [2],
+		"name": "123Print",
+		"domain": "123print.com",
+		"desc": "7.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10654293"
+	},
+	{
+		"name": "1&1",
+		"domain": "1and1.com",
+		"desc": "$1.25-$150",
+		"link": "http://www.anrdoezrs.net/click-4147908-10896872"
+	},
+	{
+		"name": "24 Hour Fitness",
+		"domain": "24hourfitness.com",
+		"desc": "2.5%-5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10583520"
+	},
+	{
+		"name": "360 Training",
+		"domain": "360training.com",
+		"desc": "7.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10822928"
+	},
+	{
 		"name": "4 Wheel Parts",
-    "domain": "",
-		"desc": "Serving the needs off-road enthusiasts for over 40 years as the nations largest distributor of 4x4 parts and accessories for trucks, Jeeps, and SUV's.",
-		"link": "http://www.tkqlhce.com/click-4147908-10458480",
-		"img": "4wheelparts.png",
-		"aff": true,
-		"live": true
+		"domain": "4wheelparts.com",
+		"desc": "3.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10458480"
 	},
 	{
-		"id": 84,
-		"tags": [1,4],
+		"name": "4WD",
+		"domain": "4wd.com",
+		"desc": "3.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10448096"
+	},
+	{
 		"name": "6pm.com",
-    "domain": "",
-		"desc": "Get more for your dollar when you shop shoes, clothes, and bags on 6pm.com. Save up to 75% off retail prices when you explore our amazing deals.",
-		"link": "http://www.jdoqocy.com/click-4147908-10812805",
-		"img": "6pm.png",
-		"aff": true,
-		"live": true
+		"domain": "6pm.com",
+		"desc": "2.5%-3.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10812805"
 	},
 	{
-		"id": 27,
-		"tags": [1,4,17],
+		"name": "AC Lens",
+		"domain": "aclens.com",
+		"desc": "2.5%-5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10303780"
+	},
+	{
 		"name": "Adidas",
-    "domain": "",
-		"desc": "See the latest adidas for running, basketball, soccer and more. Explore style collections from adidas Originals and Y-3.",
-		"link": "http://www.jdoqocy.com/click-4147908-10440391",
-		"img": "adidas.png",
-		"aff": true,
-		"live": true		
+		"domain": "shopadidas.com",
+		"desc": "3.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10440391"
 	},
 	{
-		"id": 83,
-		"tags": [2],
 		"name": "Advance Auto Parts",
-    "domain": "",
-		"desc": "Your source for quality auto parts, advice and accessories. Shop online for home delivery or pick up at a location near you.",
-		"link": "http://www.anrdoezrs.net/click-4147908-10804489",
-		"img": "advanceautoparts.png",
-		"aff": true,
-		"live": true		
+		"domain": "advanceautoparts.com",
+		"desc": "4%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10804489"
 	},
 	{
-		"id": 63,
-		"tags": [5],
 		"name": "Adobe",
-    "domain": "",
-		"desc": "Innovators for digital media creation and editing, multimedia authoring, and web development.",
-		"link": "http://www.jdoqocy.com/click-4147908-10453550",
-		"img": "adobe.png",
-		"aff": true,
-		"live": true
+		"domain": "adobe.com",
+		"desc": "2.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10453550"
 	},
 	{
-		"id": 126,
-		"tags": [1,4,17],
-		"name": "Aeropostale",
-    "domain": "",
-		"desc": "Focused selection of high-quality, active-oriented, fashion and fashion basic merchandise.",
-		"link": "http://www.aeropostale.com",
-		"img": ".png",
-		"aff": false,
-		"live": false
+		"name": "Agent Campus",
+		"domain": "agentcampus.com",
+		"desc": "7.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10822930"
 	},
 	{
-		"id": 86,
-		"tags": [20,9,8],
+		"name": "AliExpress",
+		"domain": "aliexpress.com",
+		"desc": "4%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10790158"
+	},
+	{
 		"name": "All Posters",
-    "domain": "",
-		"desc": "With more than 900,000 images, AllPosters is your one-stop-shop for wall art.",
-		"link": "http://www.kqzyfj.com/click-4147908-10770696",
-		"img": "allposters.png",
-		"aff": true,
-		"live": true		
+		"domain": "allposters.com",
+		"desc": "5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10770696"
 	},
 	{
-		"id": 64,
-		"tags": [1],
 		"name": "Allen Edmonds",
-    "domain": "",
-		"desc": "The official site of the world's leading manufacturer of quality leather mens shoes.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000031472139&pubid=21000000000316594",
-		"img": "allenedmonds.png",
-		"aff": true,
-		"live": true		
+		"domain": "allenedmonds.com",
+		"desc": "3.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000031472139&pubid=21000000000316594"
 	},
 	{
-		"id": 111,
-		"tags": [1,4],
 		"name": "Alternative Apparel",
-    "domain": "",
-		"desc": "Premier casual lifestyle apparel brand, delivering the best quality and value in fashion basics.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000029026066&pubid=21000000000316594",
-		"img": "alternativeapparel.png",
-		"aff": true,
-		"live": true
+		"domain": "alternativeapparel.com",
+		"desc": "2.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000029026066&pubid=21000000000316594"
 	},
 	{
-		"id": 0,
-		"tags": [1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17],
 		"name": "Amazon",
 		"domain": "amazon.com",
-		"desc": "The earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel & just about anything else.",
-		"link": "http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2F&tag=pungle00-20&linkCode=ur2&camp=1789&creative=390957",
-		"img": "amazon.png",
-		"aff": true,
-		"live": true
+		"desc": "2%-4%",
+		"link": "http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2F&tag=pungle00-20&linkCode=ur2&camp=1789&creative=390957"
 	},
 	{
-		"id": 112,
-		"tags": [1,4,7],
-		"name": "American Apparel",
-    "domain": "",
-		"desc": "Fashionable basics. Sweatshop free. Made in USA. That's American Apparel.",
-		"link": "http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fentity%2FAmerican-Apparel%2F2491485011%3Fie%3DUTF8%26ref_%3Dep_sprkl_br_2491485011&tag=pungle00-20&linkCode=ur2&camp=1789&creative=390957",
-		"img": "americanapparel.png",
-		"aff": true,
-		"live": true
+		"name": "Ancestry.com",
+		"domain": "ancestry.com",
+		"desc": "7.5%-12.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10456885"
 	},
 	{
-		"id": 128,
-		"tags": [1,4,7,9,11],
-		"name": "Anthropologie",
-    "domain": "",
-		"desc": "An inspiring place to shop for Women's clothing, accessories, and home decor.",
-		"link": "http://www.anthropologie.com",
-		"img": "anthropologie.png",
-		"aff": false,
-		"live": true
+		"name": "Art.com",
+		"domain": "art.com",
+		"desc": "5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10716084"
 	},
 	{
-		"id": 129,
-		"tags": [5,6],
-		"name": "Apple Store",
-    "domain": "",
-		"desc": "Experience the wide world of Apple at the Apple Store.",
-		"link": "http://store.apple.com/us",
-		"img": "apple.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 154,
-		"tags": [1,4,17],
-		"name": "Athleta",
-    "domain": "",
-		"desc": "Women's yoga clothing, swimwear, running clothing and athletic clothing for fitness, golf & tennis.",
-		"link": "http://www.kqzyfj.com/click-4147908-10415271",
-		"img": "athleta.png",
-		"aff": true,
-		"live": true
-	},
-	{
-		"id": 155,
-		"tags": [3,13],
 		"name": "Audible",
-    "domain": "",
-		"desc": "Download audio books for your ipod or MP3 player.",
-		"link": "http://www.jdoqocy.com/click-4147908-10298646",
-		"img": "audible.png",
-		"aff": true,
-		"live": true
+		"domain": "audible.com",
+		"desc": "5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10298646"
 	},
 	{
-		"id": 65,
-		"tags": [2],
 		"name": "Auto Parts Warehouse",
-    "domain": "",
-		"desc": "Online retailer offering replacement parts, performance parts and auto accessories at wholesale prices.",
-		"link": "http://www.anrdoezrs.net/click-4147908-1058847",
-		"img": "autopartswarehouse.png",
-		"aff": true,
-		"live": true
+		"domain": "autopartswarehouse.com",
+		"desc": "4%-7%",
+		"link": "http://www.anrdoezrs.net/click-4147908-1058847"
 	},
 	{
-		"id": 131,
-		"tags": [20,6],
-		"name": "B&H Photo",
-    "domain": "",
-		"desc": "Photographic and consumer electronics, including new and used equipment.",
-		"link": "http://www.bhphotovideo.com/",
-		"img": "bhphoto.png",
-		"aff": false,
-		"live": true
+		"name": "AutoAnything",
+		"domain": "autoanything.com",
+		"desc": "4%",
+		"link": "http://www.dpbolvw.net/click-4147908-10316115"
 	},
 	{
-		"id": 122,
-		"tags": [4,17],
-		"name": "Backcountry.com",
-    "domain": "",
-		"desc": "The foremost selection of The North Face, Mountain Hardwear, Arc'teryx, and Patagonia skiing, camping, hiking, and backpacking gear.",
-		"link": "http://www.backcountry.com/",
-		"img": ".png",
-		"aff": false,
-		"live": false
+		"name": "backcountry.com",
+		"domain": "backcountry.com",
+		"desc": "4%",
+		"link": "http://www.dpbolvw.net/click-4147908-10464373"
 	},
 	{
-		"id": 152,
-		"tags": [1,4],
-		"name": "Banana Republic",
-    "domain": "",
-		"desc": "Modern, refined clothing for men and women, plus shoes and accessories.",
-		"link": "http://www.kqzyfj.com/click-4147908-10415271",
-		"img": "bananarepublic.png",
-		"aff": true,
-		"live": true
+		"name": "Bag King",
+		"domain": "bagking.com",
+		"desc": "4.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=205574.10000004&type=3&subid=0"
 	},
 	{
-		"id": 41,
-		"tags": [3,13,8],
 		"name": "Barnes & Noble",
-    "domain": "",
-		"desc": "Books, DVDs, Music, Toys & Games and More.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=229293.54&type=3&subid=0",
-		"img": "barnesandnoble.png",
-		"aff": true,
-		"live": true
+		"domain": "barnesandnoble.com",
+		"desc": "3%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=229293.54&type=3&subid=0"
 	},
 	{
-		"id": 163,
-		"tags": [1,4,10],
-		"name": "BCBG",
-    "domain": "",
-		"desc": "Suits, separates, jeans, coats, dresses, hangbags and fragrance products.",
-		"link": "http://www.bcbg.com",
-		"img": "bcbg.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 39,
-		"tags": [1,4],
 		"name": "Bebe",
-    "domain": "",
-		"desc": "Women's sexy & trendy clothing, dresses, tops, shoes, jeans, handbags and accessories.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000225506595267&pubid=21000000000316594",
-		"img": "bebe.png",
-		"aff": true,
-		"live": true
+		"domain": "bebe.com",
+		"desc": "2.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000225506595267&pubid=21000000000316594"
 	},
 	{
-		"id": 130,
-		"tags": [7,9,11],
-		"name": "Bed Bath & Beyond",
-    "domain": "",
-		"desc": "Bedding, bath towels, kitchen electrics, cookware, window treatments, storage items, gifts and much more.",
-		"link": "http://www.bedbathandbeyond.com",
-		"img": "bedbathandbeyond.png",
-		"aff": false,
-		"live": true
+		"name": "Best of Vegas",
+		"domain": "bestofvegas.com",
+		"desc": "2.5%-3%",
+		"link": "http://www.kqzyfj.com/click-4147908-10708153?cm_mmc=CJ-_-3149226-_-4147908-_-BestOfVegas%20Home%20Page"
 	},
 	{
-		"id": 8,
-		"tags": [5,6,13,15,14],
 		"name": "Best Buy",
-    "domain": "",
-		"desc": "Retailer of consumer electronics and entertainment software Electronics, Appliances, Cell Phones, CDs, DVDs & More.",
-		"link": "http://www.kqzyfj.com/click-4147908-10482812",
-		"img": "bestbuy.png",
-		"aff": true,
-		"live": true
+		"domain": "bestbuy.com",
+		"desc": "1%-3%",
+		"link": "http://www.kqzyfj.com/click-4147908-10482812"
 	},
 	{
-		"id": 66,
-		"tags": [1],
+		"name": "BIG Commerce",
+		"domain": "bigcommerce.com",
+		"desc": "$35-$150",
+		"link": "http://www.tkqlhce.com/click-4147908-10704664"
+	},
+	{
+		"name": "Bigger Books",
+		"domain": "biggerbooks.com",
+		"desc": "2.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-9458111"
+	},
+	{
+		"name": "BIGPOINT",
+		"domain": "bigpoint.com",
+		"desc": "$.20-$.70",
+		"link": "http://www.jdoqocy.com/click-4147908-10497371"
+	},
+	{
+		"name": "Bike Bandit",
+		"domain": "bikebandit.com",
+		"desc": "2.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10486464"
+	},
+	{
+		"name": "Bjorn Borg",
+		"domain": "bjornborg.com",
+		"desc": "5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10880419"
+	},
+	{
+		"name": "Blue Man Group",
+		"domain": "bluemanticketing.com",
+		"desc": "5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10688326"
+	},
+	{
 		"name": "Blue Nile",
-    "domain": "",
-		"desc": "Largest online retailer of certified diamonds, engagement rings and fine jewelry.  Build your engagement ring online.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000027176530&pubid=21000000000316594",
-		"img": "bluenile.png",
-		"aff": true,
-		"live": true
+		"domain": "bluenile.com",
+		"desc": "2.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000027176530&pubid=21000000000316594"
 	},
 	{
-		"id": 124,
-		"tags": [1,4],
-		"name": "Bluefly",
-    "domain": "",
-		"desc": "Designer clothing, handbags, shoes, and accessories at discount prices.",
-		"link": "http://www.bluefly.com",
-		"img": "bluefly.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 37,
-		"tags": [9,10],
 		"name": "The Body Shop",
-    "domain": "",
-		"desc": "Natural beauty products including natural skin care, make-up, body butter, aromatherapy, hair care and more.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=97526.10001495&type=4&subid=0",
-		"img": "bodyshop.png",
-		"aff": true,
-		"live": true
+		"domain": "thebodyshop-usa.com",
+		"desc": "4%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=97526.10001495&type=4&subid=0"
 	},
 	{
-		"id": 40,
-		"tags": [3,8,13],
-		"name": "Borders",
-    "domain": "",
-		"desc": "Books, music, DVDs, Blu-ray, gifts, toys & games.",
-		"link": "http://www.dpbolvw.net/click-4147908-10568661?cm_mmc=CJ-_-3149226-_-4147908-_-88x31%20logo",
-		"img": "borders.png",
-		"aff": true,
-		"live": true
+		"name": "BONKTOWN",
+		"domain": "bonktown.com",
+		"desc": "1%",
+		"link": "http://www.tkqlhce.com/click-4147908-10911257"
 	},
 	{
-		"id": 179,
-		"tags": [1,4,9,10,11,16],
+		"name": "Bookbyte",
+		"domain": "bookbyte.com",
+		"desc": "2.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10365057"
+	},
+	{
+		"name": "BookRenter",
+		"domain": "bookrenter.com",
+		"desc": "4%",
+		"link": "http://www.tkqlhce.com/click-4147908-10744058"
+	},
+	{
 		"name": "Boscov's",
-    "domain": "",
-		"desc": "Latest styles and trends in fashion and home decor.",
-		"link": "http://www.boscovs.com",
-		"img": "boscovs.png",
-		"aff": false,
-		"live": true
+		"domain": "boscovs.com",
+		"desc": "2.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10394894"
 	},
 	{
-		"id": 132,
-		"tags": [1,4],
-		"name": "BTC Elements",
-    "domain": "",
-		"desc": "Fresh, inspiring fashion designs that are both earth friendly and ethically sourced.",
-		"link": "http://www.btcelements.com",
-		"img": "btcelements.png",
-		"aff": false,
-		"live": true
+		"name": "Botique To You",
+		"domain": "boutiquetoyou.com",
+		"desc": "5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10707361"
 	},
 	{
-		"id": 21,
-		"tags": [18],
+		"name": "Bradford Exchange",
+		"domain": "bradfordexchange.com",
+		"desc": "6%-25%",
+		"link": "http://www.dpbolvw.net/click-4147908-10412116?cm_mmc=CJ-_-3149226-_-4147908-_-Branded%20Static%2088x31"
+	},
+	{
 		"name": "Budget",
-    "domain": "",
-		"desc": "Car rentals including sedans, trucks, SUV's and more.",
-		"link": "http://www.kqzyfj.com/click-4147908-10431575",
-		"img": "budget.png",
-		"aff": true,
-		"live": true
+		"domain": "budget.com",
+		"desc": "1.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10431575"
 	},
 	{
-		"id": 67,
-		"tags": [4],
 		"name": "Busted Tees",
-    "domain": "",
-		"desc": "Funny t-shirts on American Apparel, hip t-shirt designs and retro vintage styles.",
-		"link": "http://www.tkqlhce.com/click-4147908-10406619",
-		"img": "bustedtees.png",
-		"aff": true,
-		"live": true
+		"domain": "bustedtees.com",
+		"desc": "6%",
+		"link": "http://www.tkqlhce.com/click-4147908-10406619"
 	},
 	{
-		"id": 17,
-		"tags": [1,20,3,4,5,6,7,8,10,11,13,14,15,16,17,19],
 		"name": "Buy.com",
-    "domain": "",
-		"desc": "Low Prices on 8 Million+ Items",
-		"link": "http://affiliate.buy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=212696.10000236&type=3&subid=0",
-		"img": "buy.png",
-		"aff": true,
-		"live": true
+		"domain": "buy.com",
+		"desc": "1.5%-5%",
+		"link": "http://affiliate.buy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=212696.10000236&type=3&subid=0"
 	},
 	{
-		"id": 161,
-		"tags": [1,4,17],
-		"name": "Cache",
-    "domain": "",
-		"desc": "Distinctive casual sportswear to stunning eveningwear to contemporary accessories.",
-		"link": "http://www.cache.com",
-		"img": "cache.png",
-		"aff": false,
-		"live": true
+		"name": "Cafe Press",
+		"domain": "cafepress.com",
+		"desc": "7.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10529746"
 	},
 	{
-		"id": 87,
-		"tags": [7,9],
+		"name": "Calendars.com",
+		"domain": "calendars.com",
+		"desc": "5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10481146"
+	},
+	{
+		"name": "Camera World",
+		"domain": "cameraworld.com",
+		"desc": "1.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10715326"
+	},
+	{
+		"name": "Care.com",
+		"domain": "care.com",
+		"desc": "$21",
+		"link": "http://www.tkqlhce.com/click-4147908-10563238"
+	},
+	{
+		"name": "CarRentals.com",
+		"domain": "carrentals.com",
+		"desc": "1%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=181836.10000004&type=3&subid=0"
+	},
+	{
+		"name": "Carrot Ink",
+		"domain": "carrotink.com",
+		"desc": "1%-23.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=181836.10000004&type=3&subid=0"
+	},
+	{
+		"name": "Caterpillar",
+		"domain": "shopcaterpillar.com",
+		"desc": "4%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10828210"
+	},
+	{
 		"name": "Celebrate Express",
-    "domain": "",
-		"desc": "Ultimate resource for party supplies.",
-		"link": "http://www.tkqlhce.com/click-4147908-10641229",
-		"img": "celebrateexpress.png",
-		"aff": true,
-		"live": true,
-		"deals": [
-		]
+		"domain": "celebrateexpress.com",
+		"desc": "5%-10%",
+		"link": "http://www.tkqlhce.com/click-4147908-10641229"
 	},
 	{
-		"id": 164,
-		"tags": [1,4,7],
-		"name": "Chloe Loves Charlie",
-    "domain": "",
-		"desc": "Affordable, trendy Juniors fashion from emerging designers and labels.",
-		"link": "http://www.chloelovescharlie.com",
-		"img": "chloelovescharlie.png",
-		"aff": false,
-		"live": true
+		"name": "CHAINLOVE",
+		"domain": "chainlove.com",
+		"desc": "1%",
+		"link": "http://www.tkqlhce.com/click-4147908-10911264"
 	},
 	{
-		"id": 149,
-		"tags": [9,11,19],
-		"name": "Cost Plus World Market",
-    "domain": "worldmarket.com",
-		"desc": "Unique and authentic home furnishings, decor and more.",
-		"link": "http://www.worldmarket.com",
-		"img": ".png",
-		"aff": false,
-		"live": false
+		"name": "Cheap Tickets",
+		"domain": "cheaptickets.com",
+		"desc": "1%-11%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=179551.10000923&subid=0&type=4"
 	},
 	{
-		"id": 88,
-		"tags": [5,6],
-		"name": "Dell Home",
-    "domain": "",
-		"desc": "Dell desktop or laptop home computers and electronics for your home or small office.",
-		"link": "http://www.jdoqocy.com/click-4147908-10494080",
-		"img": "dell.png",
-		"aff": true,
-		"live": true
+		"name": "Chemistry",
+		"domain": "chemistry.com",
+		"desc": "50%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=127634.10000005&type=3&subid=0"
 	},
 	{
-		"id": 160,
-		"tags": [11],
-		"name": "Design Within Reach",
-    "domain": "",
-		"desc": "Enduring, purposeful and innovative furniture and accessories.",
-		"link": "http://www.dwr.com",
-		"img": "designwithinreach.png",
-		"aff": false,
-		"live": true
+		"name": "Clark Color",
+		"domain": "clarkcolor.com",
+		"desc": "$7",
+		"link": "http://www.jdoqocy.com/click-4147908-10595984"
 	},
 	{
-		"id": 22,
-		"tags": [17],
+		"name": "Click Inks",
+		"domain": "clickinks.com",
+		"desc": "2%-12.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10725689"
+	},
+	{
+		"name": "Click N Kids",
+		"domain": "clicknkids.com",
+		"desc": "12.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10434236"
+	},
+	{
+		"name": "Collections ETC",
+		"domain": "collectionsetc.com",
+		"desc": "4%",
+		"link": "http://www.tkqlhce.com/click-4147908-10720837"
+	},
+	{
+		"name": "Constant Contact",
+		"domain": "constantcontact.com",
+		"desc": "$1-$25",
+		"link": "http://www.anrdoezrs.net/click-4147908-10594130"
+	},
+	{
+		"name": "The Container Store",
+		"domain": "containerstore.com",
+		"desc": "3%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000031445630&pubid=21000000000316594"
+	},
+	{
+		"name": "Cool Handle",
+		"domain": "coolhandle.com",
+		"desc": "$40",
+		"link": "http://www.tkqlhce.com/click-4147908-10605230?cm_mmc=CJ-_-3149226-_-4147908-_-Cool%20Handle%20Web%20Hosting"
+	},
+	{
+		"name": "Cosmetology Campus",
+		"domain": "cosmetologycampus.com",
+		"desc": "7.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10822934"
+	},
+	{
+		"name": "CourseSmart",
+		"domain": "coursesmart.com",
+		"desc": "2.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10692335"
+	},
+	{
+		"name": "Cruiser Customizing",
+		"domain": "cruisercustomizing.com",
+		"desc": "2.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10794573"
+	},
+	{
+		"name": "Custom Ink",
+		"domain": "customink.com",
+		"desc": "5%",
+		"link": "http://www.customink.com/cink/r.jsp?img=16&kbid=4308"
+	},
+	{
+		"name": "Decorator Fountains",
+		"domain": "decoratorfountains.com",
+		"desc": "4.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10586099?cm_mmc=CJ-_-3149226-_-4147908-_-df_88x31_logo"
+	},
+	{
+		"name": "Dell",
+		"domain": "dell.com",
+		"desc": "1%",
+		"link": "http://www.jdoqocy.com/click-4147908-10494074"
+	},
+	{
+		"name": "Department of Goods",
+		"domain": "departmentofgoods.com",
+		"desc": "2.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10774590"
+	},
+	{
 		"name": "Dick's Sporting Goods",
-    "domain": "",
-		"desc": "Shop Dick's Sporting Goods for the finest quality products at competitive prices, backed by the best service anywhere.",
-		"link": "http://www.pjtra.com/t/Sj9GRkZHP0dLSUdLP0ZIR0ZC",
-		"img": "dickssportinggoods.png",
-		"aff": true,
-		"live": true
+		"domain": "dickssportinggoods.com",
+		"desc": "2%",
+		"link": "http://www.pjtra.com/t/Sj9GRkZHP0dLSUdLP0ZIR0ZC"
 	},
 	{
-		"id": 89,
-		"tags": [20,7],
+		"name": "DinoDirect",
+		"domain": "dinodirect.com",
+		"desc": "5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10829126"
+	},
+	{
+		"name": "Discount Mags",
+		"domain": "discountmags.com",
+		"desc": "10%",
+		"link": "http://www.dpbolvw.net/click-4147908-10796583"
+	},
+	{
 		"name": "Discount School Supply",
-    "domain": "",
-		"desc": "Lowest prices on school supplies and equipment for early childhood educators, caregivers and parents of young children.",
-		"link": "http://www.dpbolvw.net/click-4147908-10665101",
-		"img": "discountschoolsupply.png",
-		"aff": true,
-		"live": true
+		"domain": "discountschoolsupply.com",
+		"desc": "2.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10665101"
 	},
 	{
-		"id": 90,
-		"tags": [7,9],
 		"name": "Disney Store",
-    "domain": "",
-		"desc": "The official site for Disney merchandise.",
-		"link": "http://www.tkqlhce.com/click-4147908-10682890",
-		"img": "disney.png",
-		"aff": true,
-		"live": true
+		"domain": "disneystore.com",
+		"desc": "1.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10682890"
 	},
 	{
-		"id": 123,
-		"tags": [17],
 		"name": "Dogfunk",
-    "domain": "",
-		"desc": "Park and powder snowboarding gear.",
-		"link": "http://www.dogfunk.com",
-		"img": ".png",
-		"aff": false,
-		"live": false
+		"domain": "dogfunk.com",
+		"desc": "4%",
+		"link": "http://www.kqzyfj.com/click-4147908-10430009"
 	},
 	{
-		"id": 68,
-		"tags": [10,11],
+		"name": "Dr. Leonard's",
+		"domain": "drleonards.com",
+		"desc": "4%",
+		"link": "http://www.jdoqocy.com/click-4147908-10646518?cm_mmc=CJ-_-3149226-_-4147908-_-Dr.%20Leonard's%20120x90"
+	},
+	{
+		"name": "Drivers Ed",
+		"domain": "driversed.com",
+		"desc": "10%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10693071"
+	},
+	{
 		"name": "Drugstore.com",
-    "domain": "drugstore.com",
-		"desc": "Online pharmacy for prescription drugs and information as well as health, beauty, green & natural products, household items & much more.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=215687.10000553&type=4&subid=0",
-		"img": "drugstore.png",
-		"aff": true,
-		"live": true
+		"domain": "drugstore.com",
+		"desc": "5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=215687.10000553&type=4&subid=0"
 	},
 	{
-		"id": 99,
-		"tags": [1,17],
+		"name": "EA Store",
+		"domain": "origin.com",
+		"desc": "4%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=199188.10000040&subid=0&type=4"
+	},
+	{
 		"name": "Eastbay",
-    "domain": "",
-		"desc": "Largest selection of brands, colors & sizes of athletic shoes for sports & casual shoes for play.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=203805.10000005&type=3&subid=0",
-		"img": "eastbay.png",
-		"aff": true,
-		"live": true
+		"domain": "eastbay.com",
+		"desc": "2.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=203805.10000005&type=3&subid=0"
 	},
 	{
-		"id": 100,
-		"tags": [14],
 		"name": "EB Games",
-    "domain": "ebgames.com",
-		"desc": "Games for Xbox 360, PS3, Wii, DS, 3DS, PS2, PSP, PC and more.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=13850.10000167&type=3&subid=0",
-		"img": "",
-		"aff": true,
-		"live": false
+		"domain": "ebgames.com",
+		"desc": "2.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=13850.10000167&type=3&subid=0"
 	},
 	{
-		"id": 91,
-		"tags": [1],
 		"name": "eBags",
-    "domain": "",
-		"desc": "Largest Online Retailer of Handbags, Luggage, Backpacks, and More.",
-		"link": "http://www.kqzyfj.com/click-4147908-10293409",
-		"img": "ebags.png",
-		"aff": true,
-		"live": true
+		"domain": "ebags.com",
+		"desc": "4.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10293409"
 	},
 	{
-		"id": 108,
-		"tags": [1,4],
+		"name": "eCampus",
+		"domain": "ecampus.com",
+		"desc": "2%-4%",
+		"link": "http://www.tkqlhce.com/click-4147908-3881859"
+	},
+	{
 		"name": "Ecolissa",
-    "domain": "",
-		"desc": "Fashionable eco friendly and vegan womens clothing and accessories.",
-		"link": "http://www.ecolissa.com/?Click=206",
-		"img": "ecolissa.png",
-		"aff": true,
-		"live": true
+		"domain": "ecolissa.com",
+		"desc": "2.5%",
+		"link": "http://www.ecolissa.com/?Click=206"
 	},
 	{
-		"id": 24,
-		"tags": [1,4,17],
 		"name": "Eddie Bauer",
-    "domain": "",
-		"desc": "Eddie Bauer is a premium outdoor retailer offering signature outerwear, clothing, shoes, accessories and world-class mountaineering gear for men and women.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000000102581&pubid=21000000000316594",
-		"img": "eddiebauer.png",
-		"aff": true,
-		"live": true
+		"domain": "eddiebauer.com",
+		"desc": "2.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000000102581&pubid=21000000000316594"
 	},
 	{
-		"id": 69,
-		"tags": [10],
 		"name": "eHealth Insurance",
-    "domain": "",
-		"desc": "Free health insurance quotes online. Compare & buy medical insurance plans online in minutes.",
-		"link": "http://www.jdoqocy.com/click-4147908-10496006",
-		"img": "ehealth.png",
-		"aff": true,
-		"live": false
+		"domain": "ehealthinsurance.com",
+		"desc": "$5-$25",
+		"link": "http://www.jdoqocy.com/click-4147908-10496006"
 	},
 	{
-		"id": 115,
-		"tags": [1],
+		"name": "Elizabeth Arden",
+		"domain": "elizabetharden.com",
+		"desc": "4.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10722547"
+	},
+	{
 		"name": "Endless",
-    "domain": "",
-		"desc": "A destination for shoes and handbags dedicated to providing the best prices, selection and overall experience, including free overnight shipping.",
-		"link": "http://www.endless.com/?_encoding=UTF8&tag=pungle00-20&linkCode=ur2&camp=1789&creative=9325",
-		"img": "endless.png",
-		"aff": true,
-		"live": true
+		"domain": "endless.com",
+		"desc": "7.5%",
+		"link": "http://www.endless.com/?_encoding=UTF8&tag=pungle00-20&linkCode=ur2&camp=1789&creative=9325"
 	},
 	{
-		"id": 172,
-		"tags": [10,11],
-		"name": "Equita",
-    "domain": "",
-		"desc": "Fair trade, organic and green products for the body and home.",
-		"link": "http://www.shopequita.com",
-		"img": "equita.png",
-		"aff": false,
-		"live": true
+		"name": "Entertainment",
+		"domain": "entertainment.com",
+		"desc": "$2",
+		"link": "http://www.kqzyfj.com/click-4147908-10421059"
 	},
 	{
-		"id": 157,
-		"tags": [11],
-		"name": "Ethan Allen",
-    "domain": "",
-		"desc": "Modern, traditional and casual furniture.",
-		"link": "http://www.ethanallen.com",
-		"img": ".png",
-		"aff": false,
-		"live": false
+		"name": "Envelopes.com",
+		"domain": "envelopes.com",
+		"desc": "5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10840563"
 	},
 	{
-		"id": 19,
-		"tags": [18],
+		"name": "Euro Style Lighting",
+		"domain": "eurostylelighting.com",
+		"desc": "4.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10656701?cm_mmc=CJ-_-3149226-_-4147908-_-esl_88x31_logo"
+	},
+	{
+		"name": "Every Lamp Shade",
+		"domain": "everylampshade.com",
+		"desc": "4.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10547735?cm_mmc=CJ-_-3149226-_-4147908-_-es_88x31_logo"
+	},
+	{
 		"name": "Expedia",
-    "domain": "",
-		"desc": "Plan a trip, book cheap airfares, make hotel reservations, and find vacation packages, car rental & cruise deals.",
-		"link": "http://www.tkqlhce.com/click-4147908-10514998",
-		"img": "expedia.png",
-		"aff": true,
-		"live": true
+		"domain": "expedia.com",
+		"desc": "1%-2.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10514998"
 	},
 	{
-		"id": 10,
-		"tags": [4],
 		"name": "Express",
-    "domain": "",
-		"desc": "Express is a sophisticated fashion brand for work, the weekend, or going out. It's what's new and what's now for young fashion-forward women and men.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000027001271&pubid=21000000000316594",
-		"img": "express.png",
-		"aff": true,
-		"live": true
+		"domain": "express.com",
+		"desc": "2.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000027001271&pubid=21000000000316594"
 	},
 	{
-		"id": 70,
-		"tags": [8],
 		"name": "Fabric.com",
-    "domain": "",
-		"desc": "Find fabric by the yard, from discount to designer and read sewing tips for inspiration.",
-		"link": "http://www.dpbolvw.net/click-4147908-10283474?cm_mmc=CJ-_-3149226-_-4147908-_-Fabric.com",
-		"img": "fabric.png",
-		"aff": true,
-		"live": true
+		"domain": "fabric.com",
+		"desc": "4%",
+		"link": "http://www.dpbolvw.net/click-4147908-10283474?cm_mmc=CJ-_-3149226-_-4147908-_-Fabric.com"
 	},
 	{
-		"id": 25,
-		"tags": [1],
 		"name": "Famous Footwear",
-    "domain": "",
-		"desc": "A great selection and low prices of women's shoes, men's shoes and kids' shoes with free in-store returns and exchanges!",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000026809670&pubid=21000000000316594",
-		"img": "famoufootwear.png",
-		"aff": true,
-		"live": true
+		"domain": "famousfootwear.com",
+		"desc": "6.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000026809670&pubid=21000000000316594"
 	},
 	{
-		"id": 167,
-		"tags": [5],
-		"name": "FedEx",
-    "domain": "",
-		"desc": "A complete suite of online services for shipments.",
-		"link": "http://fedex.com/us",
-		"img": "fedex.png",
-		"aff": false,
-		"live": true
+		"name": "Fandango",
+		"domain": "fandango.com",
+		"desc": "$.10-$1",
+		"link": "http://www.kqzyfj.com/click-4147908-10507293"
 	},
 	{
-		"id": 173,
-		"tags": [19],
-		"name": "Food Fight",
-    "domain": "",
-		"desc": "An all vegan grocery store. Independent. Mom and Pop-ish.",
-		"link": "http://www.foodfightgrocery.com",
-		"img": "foodfight.png",
-		"aff": false,
-		"live": true
+		"name": "Fantastic Fans",
+		"domain": "fantasticfans.com",
+		"desc": "4.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10483658?cm_mmc=CJ-_-3149226-_-4147908-_-ff_text_freeshipping"
 	},
 	{
-		"id": 79,
-		"tags": [1,4,17],
+		"name": "Finish Line",
+		"domain": "finishline.com",
+		"desc": "2.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10699392"
+	},
+	{
+		"name": "Flower Delivery",
+		"domain": "flowerdelivery.com",
+		"desc": "10%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10362973"
+	},
+	{
+		"name": "Foot Action",
+		"domain": "footaction.com",
+		"desc": "4%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=192440.10000128&type=3&subid=0"
+	},
+	{
 		"name": "Footlocker",
-    "domain": "",
-		"desc": "Foot Locker, Inc. is the world's leading retailer of athletic footwear, apparel and accessories.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=203806.10000461&type=4&subid=0",
-		"img": "footlocker.png",
-		"aff": true,
-		"live": true
+		"domain": "footlocker.com",
+		"desc": "3%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=203806.10000461&type=4&subid=0"
 	},
 	{
-		"id": 133,
-		"tags": [1,4],
-		"name": "Forever 21",
-    "domain": "",
-		"desc": "The most current fashions for women and men.",
-		"link": "http://www.forever21.com",
-		"img": "forever21.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 71,
-		"tags": [1],
 		"name": "Fossil",
-    "domain": "",
-		"desc": "Vintage Inspired Watches & Fashion Since 1984.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=189453.10000022&type=4&subid=0",
-		"img": "fossil.png",
-		"aff": true,
-		"live": true
+		"domain": "fossil.com",
+		"desc": "5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=189453.10000022&type=4&subid=0"
 	},
 	{
-		"id": 35,
-		"tags": [1,10],
+		"name": "FranklinCovey",
+		"domain": "franklinplanner.com",
+		"desc": "5%-12.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10289311"
+	},
+	{
 		"name": "Frederick's of Hollywood",
-    "domain": "",
-		"desc": "Lingerie is our heritage. Selling sexy bras, panties and more.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=190736.10000009&subid=0&type=4",
-		"img": "fredericks.png",
-		"aff": true,
-		"live": true
+		"domain": "fredericks.com",
+		"desc": "2%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=190736.10000009&subid=0&type=4"
 	},
 	{
-		"id": 72,
-		"tags": [14],
+		"name": "FTD",
+		"domain": "ftd.com",
+		"desc": "5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10828369"
+	},
+	{
 		"name": "Gamefly",
-    "domain": "",
-		"desc": "Online video game rentals for all kinds of consoles, with cheats, hints, codes, reviews and more.",
-		"link": "http://www.tkqlhce.com/click-4147908-10308499",
-		"img": "gamefly.png",
-		"aff": true,
-		"live": true
+		"domain": "gamefly.com",
+		"desc": "5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10308499"
 	},
 	{
-		"id": 6,
-		"tags": [14],
 		"name": "Gamestop",
-    "domain": "",
-		"desc": "PlayStation 3, PS2, PSP, Nintendo Wii, DS, XBox, Xbox360, GameCube and PC Games.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=121938.10000068&type=3&subid=0",
-		"img": "gamestop.png",
-		"aff": true,
-		"live": true
+		"domain": "gamestop.com",
+		"desc": "1%-2.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=121938.10000068&type=3&subid=0"
 	},
 	{
-		"id": 9,
-		"tags": [1,4],
-		"name": "Gap",
-    "domain": "",
-		"desc": "Clothes for the whole family. You'll find Petites and Tall sizes, kids slim and husky sizes, and baby bedding. You'll also find your favorite jeans, T-shirts and more.",
-		"link": "http://www.kqzyfj.com/click-4147908-10415271",
-		"img": "gap.png",
-		"aff": true,
-		"live": true
+		"name": "Gap, Old Navy, Banana Republic, Piperlime, Athleta",
+		"domain": "gap.com",
+		"desc": "2%",
+		"link": "http://www.kqzyfj.com/click-4147908-10415271"
 	},
 	{
-		"id": 73,
-		"tags": [19],
-		"name": "Ghiradelli",
-    "domain": "",
-		"desc": "Premium chocolate company incorporated since 1852.",
-		"link": "http://www.dpbolvw.net/click-4147908-10691105",
-		"img": "ghiradelli.png",
-		"aff": true,
-		"live": true
+		"name": "Geeks.com",
+		"domain": "geeks.com",
+		"desc": "1.5%-4%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10440522?cm_mmc=CJ-_-3149226-_-4147908-_-_120x60_9-7-2006"
 	},
 	{
-		"id": 134,
-		"tags": [1,4,11],
-		"name": "Gianna",
-    "domain": "",
-		"desc": "Fair trade gifts, eco-friendly and organic clothes, home decor and accessories handmade by disadvantaged women.",
-		"link": "http://www.giannafairtrade.com",
-		"img": "gianna.png",
-		"aff": false,
-		"live": true
+		"name": "GelaSkins",
+		"domain": "gelaskins.com",
+		"desc": "5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10814697"
 	},
 	{
-		"id": 135,
-		"tags": [1,4,20],
-		"name": "Glamour Kills",
-    "domain": "",
-		"desc": "Girls and guys graphic tees and hoodies. Also carries jewelry, tote bags, posters and decals.",
-		"link": "http://www.glamourkills.com",
-		"img": "glamourkills.png",
-		"aff": false,
-		"live": true
+		"name": "Ghirardelli",
+		"domain": "ghirardelli.com",
+		"desc": "4%",
+		"link": "http://www.dpbolvw.net/click-4147908-10691105"
 	},
 	{
-		"id": 74,
-		"tags": [12],
 		"name": "Go Daddy",
-    "domain": "",
-		"desc": "Buy, manage & host websites for less, including ecommerce sites and easy-to-use site builders.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000032103755&pubid=21000000000316594",
-		"img": "godaddy.png",
-		"aff": true,
-		"live": true
+		"domain": "godaddy.com",
+		"desc": "10%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000032103755&pubid=21000000000316594"
 	},
 	{
-		"id": 57,
-		"tags": [11],
+		"name": "Golfsmith",
+		"domain": "golfsmith.com",
+		"desc": "3%",
+		"link": "http://www.tkqlhce.com/click-4147908-10435621"
+	},
+	{
+		"name": "Graveyard Mall",
+		"domain": "graveyardmall.com",
+		"desc": "3.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-9837885"
+	},
+	{
+		"name": "Gravity Defyer",
+		"domain": "gravitydefyer.com",
+		"desc": "10%",
+		"link": "http://www.kqzyfj.com/click-4147908-10659433"
+	},
+	{
+		"name": "Gray Line New York",
+		"domain": "newyorksightseeing.com",
+		"desc": "7.5%%",
+		"link": "http://www.jdoqocy.com/click-4147908-10761613"
+	},
+	{
 		"name": "The Great Indoors",
-    "domain": "",
-		"desc": "A huge selection of products specifically for decorating your home or accomplishing your home remodeling project. Founded in Denver, Colorado since 1998",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000023797989&pubid=21000000000316594",
-		"img": "greatindoors.png",
-		"aff": true,
-		"live": true
+		"domain": "thegreatindoors.com",
+		"desc": "1%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000023797989&pubid=21000000000316594"
 	},
 	{
-		"id": 75,
-		"tags": [19,9],
 		"name": "Groupon",
-    "domain": "",
-		"desc": "Get 50 to 90 percent off the best stuff your city has to offer.",
-		"link": "http://www.dpbolvw.net/click-4147908-10769812",
-		"img": "groupon.png",
-		"aff": true,
-		"live": true
+		"domain": "groupon.com",
+		"desc": "1%-5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10769812"
 	},
 	{
-		"id": 116,
-		"tags": [1,4],
-		"name": "Guess",
-    "domain": "",
-		"desc": "Dress to impress with the latest styles in jeans, denim, tops, shirts, watches, shoes, jewelry, handbags & more.",
-		"link": "http://shop.guess.com/",
-		"img": ".png",
-		"aff": false,
-		"live": false
-	},
-	{
-		"id": 92,
-		"tags": [5],
 		"name": "H&R Block",
-    "domain": "",
-		"desc": "Your single source for tax preparation.",
-		"link": "http://www.jdoqocy.com/click-4147908-10460346",
-		"img": "hrblock.png",
-		"aff": true,
-		"live": true
+		"domain": "hrblock.com",
+		"desc": "10%",
+		"link": "http://www.jdoqocy.com/click-4147908-10460346"
 	},
 	{
-		"id": 109,
-		"tags": [19],
+		"name": "Hanes",
+		"domain": "hanes.com",
+		"desc": "3%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=186832.10000166&type=4&subid=0"
+	},
+	{
 		"name": "Happy Tiffin",
-    "domain": "",
-		"desc": "The premier 'green' food container company.",
-		"link": "http://www.happytiffin.com/index.php?ref=12&cPath=0&affiliate_banner_id=12",
-		"img": "happytiffin.png",
-		"aff": true,
-		"live": true
+		"domain": "happytiffin.com",
+		"desc": "5%",
+		"link": "http://www.happytiffin.com/index.php?ref=12&cPath=0&affiliate_banner_id=12"
 	},
 	{
-		"id": 76,
-		"tags": [9,19],
 		"name": "Harry & David",
-    "domain": "",
-		"desc": "Gourmet gift baskets, fresh fruit gifts, gourmet chocolate and Fruit-of-the-Month club, in the gift business for over 75 years.",
-		"link": "http://www.kqzyfj.com/click-4147908-10788972",
-		"img": "harryanddavid.png",
-		"aff": true,
-		"live": true
+		"domain": "harryanddavid.com",
+		"desc": "3.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10788972"
 	},
 	{
-		"id": 176,
-		"tags": [1,3,4,20],
-		"name": "Herbivore Clothing Co",
-    "domain": "",
-		"desc": "Vegan clothing, books, stickers, purses, jewelry, accessories and more.",
-		"link": "http://www.herbivoreclothing.com",
-		"img": "herbivore.png",
-		"aff": false,
-		"live": true
+		"name": "Health Campus",
+		"domain": "healthcampus.com",
+		"desc": "7.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10867129"
 	},
 	{
-		"id": 136,
-		"tags": [11],
-		"name": "The Home Depot",
-    "domain": "",
-		"desc": "All your home improvement needs.",
-		"link": "http://www.homedepot.com",
-		"img": "homedepot.png",
-		"aff": false,
-		"live": true
+		"name": "Host Papa",
+		"domain": "hostpapa.com",
+		"desc": "$7-$100",
+		"link": "http://www.anrdoezrs.net/click-4147908-10513988"
 	},
 	{
-		"id": 20,
-		"tags": [18],
-		"name": "Hotels.com",
-    "domain": "",
-		"desc": "Choose from luxury to cheap, B&B to 5 star hotels. Read reviews, detailed descriptions, maps and quality photos. Now With No Change or Cancel Fees.",
-		"link": "http://www.dpbolvw.net/click-4147908-10443216",
-		"img": "hotels.png",
-		"aff": true,
-		"live": true
-	},
-	{
-		"id": 34,
-		"tags": [1,4],
 		"name": "Hot Topic",
-    "domain": "",
-		"desc": "Hot Topic specializes in music and pop culture based fashion including Rock T-Shirts, Skinny Jeans, Band Tees, accessories and more.",
-		"link": "http://www.anrdoezrs.net/click-4147908-10366692",
-		"img": "hottopic.png",
-		"aff": true,
-		"live": true
+		"domain": "hottopic.com",
+		"desc": "2.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10366692"
 	},
 	{
-		"id": 93,
-		"tags": [5],
-		"name": "HP Home",
-    "domain": "",
-		"desc": "HP laptops, notebooks, desktops, printers and more.",
-		"link": "http://www.jdoqocy.com/click-4147908-10423984",
-		"img": "hp.png",
-		"aff": true,
-		"live": true
+		"name": "Hotels.com",
+		"domain": "hotels.com",
+		"desc": "2.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10443216"
 	},
 	{
-		"id": 158,
-		"tags": [1,4,10],
-		"name": "ideeli",
-    "domain": "",
-		"desc": "Must-have brands from the worlds of fashion, home and beauty at up to 80% off.",
-		"link": "http://www.ideeli.com",
-		"img": "ideeli.png",
-		"aff": false,
-		"live": true
+		"name": "Hotwire",
+		"domain": "hotwire.com",
+		"desc": "1%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=215953.10000002&type=3&subid=0"
 	},
 	{
-		"id": 4,
-		"tags": [13],
+		"name": "HP",
+		"domain": "hp.com",
+		"desc": "1%",
+		"link": "http://www.jdoqocy.com/click-4147908-10423984"
+	},
+	{
+		"name": "HubSpot",
+		"domain": "hupspot.com",
+		"desc": "$5",
+		"link": "http://www.kqzyfj.com/click-4147908-10926352"
+	},
+	{
+		"name": "In The Company Of Dogs",
+		"domain": "inthecompanyofdogs.com",
+		"desc": "2.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10552660"
+	},
+	{
+		"name": "Industrial Institute",
+		"domain": "industrialinstitute.com",
+		"desc": "7.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10884888"
+	},
+	{
+		"name": "Intelius",
+		"domain": "intelius.com",
+		"desc": "30%",
+		"link": "http://www.kqzyfj.com/click-4147908-10794544"
+	},
+	{
 		"name": "iTunes",
-    "domain": "",
-		"desc": "Get Your Favorite Songs & Movies Instantly from the iTunes Store.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=146261.10000007&type=3&subid=0",
-		"img": "itunes.png",
-		"aff": true,
-		"live": true
+		"domain": "itunes.com",
+		"desc": "2.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=146261.10000007&type=3&subid=0"
 	},
 	{
-		"id": 138,
-		"tags": [1,4,7],
-		"name": "J.CREW",
-    "domain": "",
-		"desc": "Highest quality men's and women's clothing as well as children's clothing.",
-		"link": "http://www.jcrew.com",
-		"img": "jcrew.png",
-		"aff": false,
-		"live": true
+		"name": "Jelly Belly",
+		"domain": "jellybelly.com",
+		"desc": "5%",
+		"link": "http://www.pntra.com/t/RjtDPztDR0VDRzs_RkQ"
 	},
 	{
-		"id": 137,
-		"tags": [1,4,7,10,11],
-		"name": "JC Penny",
-    "domain": "",
-		"desc": "Apparel, shoes, jewelry, bedding, windows, and furniture. ",
-		"link": "http://www.jcpenney.com",
-		"img": "jcpenny.png",
-		"aff": false,
-		"live": true,
-		"deals": [
-		]
-	},
-	{
-		"id": 95,
-		"tags": [9],
 		"name": "JibJab",
-    "domain": "",
-		"desc": "Funny eCards, birthday cards, and more.",
-		"link": "http://www.dpbolvw.net/click-4147908-10686012",
-		"img": "jibjab.png",
-		"aff": true,
-		"live": true
+		"domain": "jibjab.com",
+		"desc": "25%",
+		"link": "http://www.dpbolvw.net/click-4147908-10686012"
 	},
 	{
-		"id": 121,
-		"tags": [8],
-		"name": "Joann",
-    "domain": "",
-		"desc": "Largest assortment of fabric, sewing, quilting, scrapbooking, knitting, crochet, Jewelry and other craft items.",
-		"link": "http://www.joann.com",
-		"img": ".png",
-		"aff": false,
-		"live": false
-	},
-	{
-		"id": 30,
-		"tags": [1,4],
 		"name": "Journeys",
-    "domain": "",
-		"desc": "Journeys is your destination for funky, hip shoes & apparel.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000011199806&pubid=21000000000316594",
-		"img": "journeys.png",
-		"aff": true,
-		"live": true
+		"domain": "journeys.com",
+		"desc": "3.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000011199806&pubid=21000000000316594"
 	},
 	{
-		"id": 42,
-		"tags": [1,20,3,4,5,6,7,19,9,10,11,13,15,16,17,8,14],
+		"name": "Just Flowers",
+		"domain": "justflowers.com",
+		"desc": "9%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10398996"
+	},
+	{
+		"name": "Just My Size",
+		"domain": "justmysize.com",
+		"desc": "3%-4%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=186834.10000003&type=3&subid=0"
+	},
+	{
+		"name": "Kaspersky",
+		"domain": "kaspersky.com",
+		"desc": "4%",
+		"link": "http://www.kqzyfj.com/click-4147908-1110836"
+	},
+	{
 		"name": "Kmart",
-    "domain": "",
-		"desc": "Discount department store and online retailer since 1962 - Find The Products You Love at Prices You Deserve at Kmart.com",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000027619266&pubid=21000000000316594",
-		"img": "kmart.png",
-		"aff": true,
-		"live": true
+		"domain": "kmart.com",
+		"desc": "2%-3.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000027619266&pubid=21000000000316594"
 	},
 	{
-		"id": 33,
-		"tags": [1,4,7,10,11,8,16],
+		"name": "The Knot",
+		"domain": "theknot.com",
+		"desc": "1%-6.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10568189"
+	},
+	{
 		"name": "Kohl's",
-    "domain": "",
-		"desc": "Expect Great Things when you shop Kohl's for apparel, shoes, accessories, home products and more.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000000387007&pubid=21000000000316594",
-		"img": "kohls.png",
-		"aff": true,
-		"live": true
+		"domain": "kohls.com",
+		"desc": "2%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000000387007&pubid=21000000000316594"
 	},
 	{
-		"id": 139,
-		"tags": [1,4],
-		"name": "L.L.Bean",
-    "domain": "",
-		"desc": "Clothing and outdoor gear for the whole family.",
-		"link": "http://www.llbean.com",
-		"img": "llbean.png",
-		"aff": false,
-		"live": true
+		"name": "Lacrosse.com",
+		"domain": "lacrosse.com",
+		"desc": "3.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10764298"
 	},
 	{
-		"id": 94,
-		"tags": [5],
+		"name": "Lacrosse Monkey",
+		"domain": "lacrossemonkey.com",
+		"desc": "3%",
+		"link": "http://www.dpbolvw.net/click-4147908-10735766"
+	},
+	{
+		"name": "Lamps Plus",
+		"domain": "lampsplus.com",
+		"desc": "4.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10656695?cm_mmc=CJ-_-3149226-_-4147908-_-ki_468x60_2for1%20"
+	},
+	{
+		"name": "Learn 2 Serve",
+		"domain": "learn2serve.com",
+		"desc": "7.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10822937"
+	},
+	{
+		"name": "Learn Insurance",
+		"domain": "learninsurance.com",
+		"desc": "7.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10822933"
+	},
+	{
+		"name": "Lego",
+		"domain": "lego.com",
+		"desc": "1.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=115554.10000009&type=3&subid=0"
+	},
+	{
 		"name": "Lenovo",
-    "domain": "",
-		"desc": "Laptops, desktop, notebooks & netbooks.",
-		"link": "http://www.jdoqocy.com/click-4147908-10484616",
-		"img": "lenovo.png",
-		"aff": true,
-		"live": true
+		"domain": "lenovo.com",
+		"desc": "1%-2.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10499647"
 	},
 	{
-		"id": 43,
-		"tags": [1],
+		"name": "Lexington Law",
+		"domain": "lexingtonlaw.com",
+		"desc": "$20",
+		"link": "http://www.anrdoezrs.net/click-4147908-10791565"
+	},
+	{
 		"name": "Lids",
-    "domain": "",
-		"desc": "Hats and caps for your favorite team or school in your favorite style.",
-		"link": "http://www.kqzyfj.com/click-4147908-10429570",
-		"img": "lids.png",
-		"aff": true,
-		"live": true
+		"domain": "lids.com",
+		"desc": "5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10429570"
 	},
 	{
-		"id": 150,
-		"tags": [1,4],
-		"name": "The Limited",
-    "domain": "",
-		"desc": "Quality fashion. Value pricing.",
-		"link": "http://www.thelimited.com/",
-		"img": ".png",
-		"aff": false,
-		"live": false
-	},
-	{
-		"id": 44,
-		"tags": [11],
 		"name": "Linens n Things",
-    "domain": "",
-		"desc": "An online retailer of home textiles, housewares and decorative home accessories.",
-		"link": "http://www.anrdoezrs.net/click-4147908-10809452",
-		"img": "linensnthings.png",
-		"aff": true,
-		"live": true
+		"domain": "lnt.com",
+		"desc": "1%-2.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10809452"
 	},
 	{
-		"id": 170,
-		"tags": [9,19],
-		"name": "LivingSocial",
-    "domain": "",
-		"desc": "Amazing Daily Deals 50-90% Off Restaurants, Spas, Events and More!",
-		"link": "http://livingsocial.com",
-		"img": "livingsocial.png",
-		"aff": false,
-		"live": true
+		"name": "Love Scent",
+		"domain": "love-scent.com",
+		"desc": "15%",
+		"link": "http://www.jdoqocy.com/click-4147908-171867"
 	},
 	{
-		"id": 175,
-		"tags": [4],
-		"name": "loyale",
-    "domain": "",
-		"desc": "Celebrate organic luxury with our eco-friendly clothing.",
-		"link": "http://www.loyaleclothing.com/shop.htm",
-		"img": "loyale.png",
-		"aff": false,
-		"live": true
+		"name": "M&M",
+		"domain": "mymms.com",
+		"desc": "5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10679074"
 	},
 	{
-		"id": 101,
-		"tags": [4],
-		"name": "Lucky Brand",
-    "domain": "",
-		"desc": "Jeans, Men's & Women's Clothing & Designer Denim.",
-		"link": "http://www.luckybrand.com/",
-		"img": "luckybrand.png",
-		"aff": false,
-		"live": false
-	},
-	{
-		"id": 7,
-		"tags": [1,4,11],
 		"name": "Macys",
-    "domain": "",
-		"desc": "Fashion Apparel and Accessories, Shoes, Perfume, Handbags, Bedding, Furniture, Mattresses, Small Kitchen Appliances and more.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=206959.100218503&type=3&subid=0",
-		"img": "macys.png",
-		"aff": true,
-		"live": true
+		"domain": "macys.com",
+		"desc": "1.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=206959.100218503&type=3&subid=0"
 	},
 	{
-		"id": 47,
-		"tags": [1],
 		"name": "Major League Baseball",
-    "domain": "",
-		"desc": "Major league baseball apparel and more.",
-		"link": "http://www.gopjn.com/t/Sj9GSEtGP0dLSUdLP0ZLS0JF",
-		"img": "mlb.png",
-		"aff": true,
-		"live": true
+		"domain": "mlb.com",
+		"desc": "3%",
+		"link": "http://www.gopjn.com/t/Sj9GSEtGP0dLSUdLP0ZLS0JF"
 	},
 	{
-		"id": 102,
-		"tags": [5],
+		"name": "Match.com",
+		"domain": "match.com",
+		"desc": "35%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=185950.10000004&type=3&subid=0"
+	},
+	{
+		"name": "Medifast Diet",
+		"domain": "medifast1.com",
+		"desc": "10%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10415095"
+	},
+	{
+		"name": "Meijer",
+		"domain": "meijer.com",
+		"desc": "1%-5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10593508"
+	},
+	{
+		"name": "Michael Stars",
+		"domain": "michaelstars.com",
+		"desc": "2.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10638738"
+	},
+	{
 		"name": "Microsoft Store",
-    "domain": "",
-		"desc": "Microsoft products, computers, games, downloads and more.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=166833.10000490&type=3&subid=0",
-		"img": "microsoft.png",
-		"aff": true,
-		"live": true
+		"domain": "microsoftstore.com",
+		"desc": "1.5%-5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=166833.10000490&type=3&subid=0"
 	},
 	{
-		"id": 174,
-		"tags": [1],
-		"name": "milk & honey",
-    "domain": "",
-		"desc": "Design and Create Your Own Custom Shoes, Bridal Shoes, Vegan/Vegetarian Eco Friendly shoes.",
-		"link": "http://www.milkandhoneyshoes.com",
-		"img": "milkandhoney.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 45,
-		"tags": [5],
 		"name": "Mint.com",
-    "domain": "",
-		"desc": "Free personal finance software to assist you to manage your money, financial planning, and budget planning tools. Achieve your financial goals with Mint.",
-		"link": "http://www.tkqlhce.com/click-4147908-10780256",
-		"img": "mint.png",
-		"aff": true,
-		"live": true
+		"domain": "mint.com",
+		"desc": "1.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10780256"
 	},
 	{
-		"id": 140,
-		"tags": [1,4,11],
 		"name": "ModCloth",
-    "domain": "",
-		"desc": "Specialized in indie, retro, and vintage apparel, accessories, shoes, and decor from independent designers and artists.",
-		"link": "http://www.anrdoezrs.net/click-4147908-10830756",
-		"img": "modcloth.png",
-		"aff": true,
-		"live": true
+		"domain": "modcloth.com",
+		"desc": "5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10830756"
 	},
 	{
-		"id": 178,
-		"tags": [1],
-		"name": "MooShoes",
-    "domain": "",
-		"desc": "Synthetic sneakers and non-leather shoes, belts and accessories.",
-		"link": "http://www.mooshoes.com",
-		"img": "mooshoes.png",
-		"aff": false,
-		"live": true
+		"name": "More Mirrors",
+		"domain": "moremirrors.com",
+		"desc": "4.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10520955?cm_mmc=CJ-_-3149226-_-4147908-_-mm_text_freeshipping"
 	},
 	{
-		"id": 46,
-		"tags": [2],
+		"name": "Motel 6",
+		"domain": "motel6.com",
+		"desc": "2%",
+		"link": "http://www.jdoqocy.com/click-4147908-10699412"
+	},
+	{
 		"name": "Motorcycle Superstore",
-    "domain": "",
-		"desc": "Largest online motorcycle accessory store selling motorcycle gear, apparel, tires and more.",
-		"link": "http://www.anrdoezrs.net/click-4147908-10562949",
-		"img": "motorcyclesuperstore.png",
-		"aff": true,
-		"live": true
+		"domain": "motorcycle-superstore.com",
+		"desc": "2%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10562949"
 	},
 	{
-		"id": 13,
-		"tags": [6,13,20,8],
+		"name": "Mozy",
+		"domain": "mozy.com",
+		"desc": "15%",
+		"link": "http://www.tkqlhce.com/click-4147908-10430938"
+	},
+	{
+		"name": "Music 123",
+		"domain": "music123.com",
+		"desc": "2%-3%",
+		"link": "http://www.dpbolvw.net/click-4147908-10583986"
+	},
+	{
+		"name": "Music & Arts",
+		"domain": "musicarts.com",
+		"desc": "4%",
+		"link": "http://www.jdoqocy.com/click-4147908-10786173"
+	},
+	{
 		"name": "Musician's Friend",
-    "domain": "",
-		"desc": "The hottest music gear at the lowest prices since 1983.",
-		"link": "http://www.dpbolvw.net/click-4147908-10451188",
-		"img": "musiciansfriend.png",
-		"aff": true,
-		"live": true
+		"domain": "musiciansfriend.com",
+		"desc": "2%-3%",
+		"link": "http://www.dpbolvw.net/click-4147908-10451188"
 	},
 	{
-		"id": 103,
-		"tags": [13,8],
 		"name": "MusicNotes",
-    "domain": "",
-		"desc": "Instantly download sheet music and guitar tab from the largest catalog of official and licensed digital sheet music.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=90283.10000007&type=3&subid=0",
-		"img": "musicnotes.png",
-		"aff": true,
-		"live": true
+		"domain": "musicnotes.com",
+		"desc": "2.5%-6%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=90283.10000007&type=3&subid=0"
 	},
 	{
-		"id": 110,
-		"tags": [4],
-		"name": "Need Supply Co",
-    "domain": "",
-		"desc": "Eclectic mix of hard-to-find vintage apparel to a well-edited selection of premium street wear and contemporary brands.",
-		"link": "http://needsupply.com?a=97",
-		"img": "needsupplyco.png",
-		"aff": true,
-		"live": true
+		"name": "My Hosting",
+		"domain": "myhosting.com",
+		"desc": "$30-$60%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10732159"
 	},
 	{
-		"id": 5,
-		"tags": [5,6,20,8,14],
+		"name": "Nashbar",
+		"domain": "nashbar.com",
+		"desc": "2.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10441959?cm_mmc=CJ-_-3149226-_-4147908-_-Nashbar%20re-direct%20link"
+	},
+	{
+		"name": "NBA Store",
+		"domain": "nba.com",
+		"desc": "2.5%",
+		"link": "http://www.gopjn.com/t/Sj9KRkJEP0dLSUdLP0dKSUpJ"
+	},
+	{
+		"name": "Netflix",
+		"domain": "netflix.com",
+		"desc": "$6",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000036346896&pubid=21000000000316594"
+	},
+	{
+		"name": "New York & Company",
+		"domain": "nyandcompany.com",
+		"desc": "2.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000036491929&pubid=21000000000316594"
+	},
+	{
 		"name": "Newegg",
-    "domain": "",
-		"desc": "Computer products, laptops, TVs, digital cameras, electronics, unlocked phones, office supplies, and more with fast shipping and top-rated customer service.",
-		"link": "http://www.jdoqocy.com/click-4147908-10444948",
-		"img": "newegg.png",
-		"aff": true,
-		"live": true
+		"domain": "newegg.com",
+		"desc": "1%-2%",
+		"link": "http://www.jdoqocy.com/click-4147908-10444948"
 	},
 	{
-		"id": 104,
-		"tags": [1,4],
 		"name": "NFL Shop",
-    "domain": "",
-		"desc": "Wide selection of Official NFL gear, apparel and jerseys.",
-		"link": "http://www.pntrac.com/t/Sj9GSkJCP0dLSUdLP0dDREtH",
-		"img": "nfl.png",
-		"aff": true,
-		"live": true
+		"domain": "nflshop.com",
+		"desc": "2.5%",
+		"link": "http://www.pntrac.com/t/Sj9GSkJCP0dLSUdLP0dDREtH"
 	},
 	{
-		"id": 141,
-		"tags": [1,4,10,7],
-		"name": "Nordstrom",
-    "domain": "",
-		"desc": "Designer apparel, shoes, jewelry, cosmetics, fragrances and accessories for women, men and kids.",
-		"link": "http://shop.nordstrom.com",
-		"img": "nordstrom.png",
-		"aff": false,
-		"live": true
+		"name": "North Style",
+		"domain": "northstyle.com",
+		"desc": "2.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10552393"
 	},
 	{
-		"id": 165,
-		"tags": [1],
-		"name": "Oddball",
-    "domain": "",
-		"desc": "Large size men's shoes in top brands up to 6E in width.",
-		"link": "http://www.oddball.com",
-		"img": "oddball.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 81,
-		"tags": [5],
 		"name": "Office Depot",
-    "domain": "",
-		"desc": "If you're looking for office supplies, the name says it all.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=174585.10000576&subid=0&type=4",
-		"img": "officedepot.png",
-		"aff": true,
-		"live": true
+		"domain": "officedepot.com",
+		"desc": "1%-3.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=174585.10000576&subid=0&type=4"
 	},
 	{
-		"id": 105,
-		"tags": [5],
 		"name": "OfficeMax",
-    "domain": "",
-		"desc": "The office-manager friendly choice for office supplies, office furniture and all types of office technology.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000029742007&pubid=21000000000316594",
-		"img": "officemax.png",
-		"aff": true,
-		"live": true
+		"domain": "officemax.com",
+		"desc": "1%-2.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000029742007&pubid=21000000000316594"
 	},
 	{
-		"id": 151,
-		"tags": [4,7],
-		"name": "Old Navy",
-    "domain": "",
-		"desc": "The latest fashions at great prices for the whole family.",
-		"link": "http://www.kqzyfj.com/click-4147908-10415271",
-		"img": "oldnavy.png",
-		"aff": true,
-		"live": true
-	},
-	{
-		"id": 82,
-		"tags": [19],
 		"name": "Omaha Steaks",
-    "domain": "",
-		"desc": "Premium steaks, red meats and other gourmet foods.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=214803.10000037&type=3&subid=0",
-		"img": "omahasteaks.png",
-		"aff": true,
-		"live": true
+		"domain": "omahasteaks.com",
+		"desc": "3.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=214803.10000037&type=3&subid=0"
 	},
 	{
-		"id": 48,
-		"tags": [18],
 		"name": "Orbitz",
-    "domain": "",
-		"desc": "Book cheap airline tickets, hotel reservations, car rentals, vacations and travel deals.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=191979.10001373&subid=0&type=4",
-		"img": "orbitz.png",
-		"aff": true,
-		"live": true
+		"domain": "orbitz.com",
+		"desc": "1.5%-2.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=191979.10001373&subid=0&type=4"
 	},
 	{
-		"id": 127,
-		"tags": [9,8,20],
-		"name": "Oriental Trading Company",
-    "domain": "",
-		"desc": "An irresistible assortment of fun, value-priced products for every occasion.",
-		"link": "http://www.orientaltrading.com",
-		"img": ".png",
-		"aff": false,
-		"live": false
+		"name": "OSHA Campus",
+		"domain": "oshacampus.com",
+		"desc": "7.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10822933"
 	},
 	{
-		"id": 49,
-		"tags": [17],
+		"name": "Outdoor Play",
+		"domain": "outdoorplay.com",
+		"desc": "3.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10903673"
+	},
+	{
 		"name": "Orvis",
-    "domain": "",
-		"desc": "A family-owned business specializing in high-end fly fishing, hunting and sporting goods. Founded in Manchester, Vermont.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000030313138&pubid=21000000000316594",
-		"img": "orvis.png",
-		"aff": true,
-		"live": true
+		"domain": "orvis.com",
+		"desc": "2.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000030313138&pubid=21000000000316594"
 	},
 	{
-		"id": 3,
-		"tags": [1,4,5,6,7,9,10,11,13,16,17,8,14,15],
 		"name": "Overstock",
-    "domain": "",
-		"desc": "Buy discounted brand Bedding, Furniture, Jewelry, Watches, Electronics, Clothing, Books, Movies, and Music for the lowest prices every day.",
-		"link": "http://www.kqzyfj.com/click-4147908-10653482",
-		"img": "overstock.png",
-		"aff": true,
-		"live": true
+		"domain": "overstock.com",
+		"desc": "1%-3.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10653482"
 	},
 	{
-		"id": 32,
-		"tags": [1],
 		"name": "Pacsun",
-    "domain": "",
-		"desc": "Shop the hottest girls clothes, guys clothes & accessories. Get the latest looks in casual teen apparel by top girls & guys clothing brands.",
-		"link": "http://www.kqzyfj.com/click-4147908-9832459",
-		"img": "pacsun.png",
-		"aff": true,
-		"live": true
+		"domain": "pacsun.com",
+		"desc": "3.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-9832459"
 	},
 	{
-		"id": 142,
-		"tags": [4],
-		"name": "PACT",
-    "domain": "",
-		"desc": "Design-driven, responsibly manufactured,premium organic cotton underwear connected to powerful social and environmental causes.",
-		"link": "http://www.wearpact.com",
-		"img": "pact.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 181,
-		"tags": [4],
 		"name": "Paul Fredrick",
-    "domain": "",
-		"desc": "Paul Fredrick's men's clothing offers the discerning man a one stop for men's suits, pants and more.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=143866.9&type=3&subid=0",
-		"img": "",
-		"aff": true,
-		"live": false
+		"domain": "paulfredrick.com",
+		"desc": "4.5%-7.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=143866.9&type=3&subid=0"
 	},
 	{
-		"id": 16,
-		"tags": [15],
+		"name": "People Finders",
+		"domain": "peoplefinders.com",
+		"desc": "25%",
+		"link": "http://www.jdoqocy.com/click-4147908-10782324"
+	},
+	{
+		"name": "Perfect Match",
+		"domain": "perfectmatch.com",
+		"desc": "30%",
+		"link": "http://www.kqzyfj.com/click-4147908-10364687"
+	},
+	{
+		"name": "Performance 4 Trucks",
+		"domain": "performance4trucks.com",
+		"desc": "3%",
+		"link": "http://www.kqzyfj.com/click-4147908-10399621"
+	},
+	{
+		"name": "Performance Bike",
+		"domain": "performancebike.com",
+		"desc": "2.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10453324?cm_mmc=CJ-_-3149226-_-4147908-_-Performance%20Bike"
+	},
+	{
 		"name": "Petsmart",
-    "domain": "",
-		"desc": "PetSmart offers the best pet supplies, services, and expertise to help you care for your pets.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=174251.10000063&type=4&subid=0",
-		"img": "petsmart.png",
-		"aff": true,
-		"live": true
+		"domain": "petsmart.com",
+		"desc": "4%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=174251.10000063&type=4&subid=0"
 	},
 	{
-		"id": 153,
-		"tags": [1,4],
-		"name": "Piperlime",
-    "domain": "",
-		"desc": "Women's shoes, handbags, apparel, and jewelry.",
-		"link": "http://www.kqzyfj.com/click-4147908-10415271",
-		"img": "piperlime.png",
-		"aff": true,
-		"live": true
+		"name": "Pfaltzgraff",
+		"domain": "pfaltzgraff.com",
+		"desc": "4%",
+		"link": "http://www.tkqlhce.com/click-4147908-10297223"
 	},
 	{
-		"id": 96,
-		"tags": [1],
 		"name": "Planet Shoes",
-    "domain": "",
-		"desc": "Home of Earth Footwear, Blowfish Shoes, Vegan Shoes and an amazing selection of Eco-Friendly Shoes.",
-		"link": "http://www.anrdoezrs.net/click-4147908-10558106",
-		"img": "planetshoes.png",
-		"aff": true,
-		"live": true
+		"domain": "planetshoes.com",
+		"desc": "5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10558106"
 	},
 	{
-		"id": 143,
-		"tags": [11],
-		"name": "Pottery Barn",
-    "domain": "",
-		"desc": "Expertly crafted home furnishings and home decor.",
-		"link": "http://www.potterybarn.com",
-		"img": "potterybarn.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 18,
-		"tags": [18],
 		"name": "Priceline",
-    "domain": "",
-		"desc": "Get deep discounts on flights, hotels, rental cars, vacations and cruises. Exclusive travel discounts you won't find anywhere else.",
-		"link": "http://www.anrdoezrs.net/click-4147908-10392991",
-		"img": "priceline.png",
-		"aff": true,
-		"live": true
+		"domain": "priceline.com",
+		"desc": "1.5%-50%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10392991"
 	},
 	{
-		"id": 50,
-		"tags": [9],
+		"name": "Premium Electronic Cigarette",
+		"domain": "premiumecigarette.com",
+		"desc": "10%",
+		"link": "http://www.jdoqocy.com/click-4147908-10756965"
+	},
+	{
 		"name": "Pro Flowers",
-    "domain": "",
-		"desc": "Order flowers online with nationwide flower delivery.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000028437763&pubid=21000000000316594",
-		"img": "proflowers.png",
-		"aff": true,
-		"live": true
+		"domain": "proflowers.com",
+		"desc": "5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000028437763&pubid=21000000000316594"
 	},
 	{
-		"id": 26,
-		"tags": [1],
 		"name": "Puma",
-    "domain": "",
-		"desc": "A German shoe, sportswear and lifestyle company since 1924",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000032595827&pubid=21000000000316594",
-		"img": "puma.png",
-		"aff": true,
-		"live": true
+		"domain": "puma.com",
+		"desc": "4.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000032595827&pubid=21000000000316594"
 	},
 	{
-		"id": 171,
-		"tags": [12],
+		"name": "The Pyramid Collection",
+		"domain": "pyramidcollection.com",
+		"desc": "2.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10552747"
+	},
+	{
 		"name": "Rackspace",
-    "domain": "",
-		"desc": "Cloud computing and cloud hosting powered by Rackspace Cloud computing.",
-		"link": "http://www.rackspacecloud.com/2029.html",
-		"img": "rackspace.png",
-		"aff": true,
-		"live": true
+		"domain": "rackspace.com",
+		"desc": "2.5%",
+		"link": "http://www.rackspacecloud.com/2029.html"
 	},
 	{
-		"id": 51,
-		"tags": [18],
 		"name": "Rail Europe",
-    "domain": "",
-		"desc": "Europe Train Tickets, Reservations, Unlimited Rail Passes, Maps & More.",
-		"link": "",
-		"img": "raileurope.png",
-		"aff": true,
-		"live": false
+		"domain": "raileurope.com",
+		"desc": "1.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10401540"
 	},
 	{
-		"id": 180,
-		"tags": [1,4,17],
-		"name": "REI",
-    "domain": "",
-		"desc": "Great gear, equipment and clothing you need for outdoor adventures.",
-		"link": "http://www.rei.com",
-		"img": ".png",
-		"aff": false,
-		"live": false
+		"name": "Realty Trac",
+		"domain": "realtytrac.com",
+		"desc": "$5-$15%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10406018"
 	},
 	{
-		"id": 156,
-		"tags": [20],
+		"name": "Rebinder",
+		"domain": "rebinder.com",
+		"desc": "5%",
+		"link": "http://www.shareasale.com/r.cfm?B=191710&U=491475&M=24028"
+	},
+	{
+		"name": "Restaurant.com",
+		"domain": "restaurant.com",
+		"desc": "7.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10416727"
+	},
+	{
 		"name": "Ritz Camera",
-    "domain": "",
-		"desc": "Digital cameras, electronics and more.",
-		"link": "http://www.jdoqocy.com/click-4147908-10715319",
-		"img": "ritzcamera.png",
-		"aff": true,
-		"live": true
+		"domain": "ritzcamera.com",
+		"desc": "1.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10715319"
 	},
 	{
-		"id": 52,
-		"tags": [1],
 		"name": "Road Runner Sports",
-    "domain": "",
-		"desc": "Road Runner Sports is the World's Largest Running Store.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000000425997&pubid=21000000000316594",
-		"img": "roadrunner.png",
-		"aff": true,
-		"live": true
+		"domain": "roadrunnersports.com",
+		"desc": "6.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000000425997&pubid=21000000000316594"
 	},
 	{
-		"id": 11,
-		"tags": [1,20,2,3,4,5,6,7,10,11,13,16,8,14],
+		"name": "Sally Beauty Supply",
+		"domain": "sallybeauty.com",
+		"desc": "5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10651040"
+	},
+	{
 		"name": "Sears",
-    "domain": "",
-		"desc": "Great selection and value for your home and family including tools, appliances, tires, mowers, electronics, and much more.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000028682458&pubid=21000000000316594",
-		"img": "sears.png",
-		"aff": true,
-		"live": true
+		"domain": "sears.com",
+		"desc": "1%-3.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000028682458&pubid=21000000000316594"
 	},
 	{
-		"id": 36,
-		"tags": [10],
 		"name": "Sephora",
-    "domain": "",
-		"desc": "Sephora.com is a leading beauty retailer offering the best cosmetics, skin care, makeup, fragrance & perfume, hair, beauty products and makeup tips.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=32532.10000186&type=4&subid=0",
-		"img": "sephora.png",
-		"aff": true,
-		"live": true
+		"domain": "sephora.com",
+		"desc": "2.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=32532.10000186&type=4&subid=0"
 	},
 	{
-		"id": 97,
-		"tags": [1,4],
+		"name": "Shindigz",
+		"domain": "shindigz.com",
+		"desc": "6.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-7298419"
+	},
+	{
+		"name": "SHOEBACCA",
+		"domain": "shoebacca.com",
+		"desc": "6.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10843903"
+	},
+	{
+		"name": "Shoebuy",
+		"domain": "shoebuy.com",
+		"desc": "8.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10368578"
+	},
+	{
+		"name": "Shop Bathroom Lighting",
+		"domain": "shopbathroomlighting.com",
+		"desc": "4.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10483677?cm_mmc=CJ-_-3149226-_-4147908-_-sb_88x31_logo"
+	},
+	{
+		"name": "Shop Floor Lamps",
+		"domain": "shopfloorlamps.com",
+		"desc": "4.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10543288?cm_mmc=CJ-_-3149226-_-4147908-_-sf_88x31_logo"
+	},
+	{
+		"name": "Shop Outdoor Lighting",
+		"domain": "shopoutdoorlighting.com",
+		"desc": "4.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10483682?cm_mmc=CJ-_-3149226-_-4147908-_-sl_88x31_logo"
+	},
+	{
+		"name": "Shop Table Lamps",
+		"domain": "shoptablelamps.com",
+		"desc": "4.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10483665?cm_mmc=CJ-_-3149226-_-4147908-_-st_88x31_logo"
+	},
+	{
 		"name": "Shopbop",
-    "domain": "",
-		"desc": "Designer women's fashion brands.",
-		"link": "http://www.anrdoezrs.net/click-4147908-10522668",
-		"img": "shopbop.png",
-		"aff": true,
-		"live": true
+		"domain": "shopbop.com",
+		"desc": "2.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10522668"
 	},
 	{
-		"id": 28,
-		"tags": [1],
+		"name": "Silk Flowers",
+		"domain": "silkflowers.com",
+		"desc": "10%",
+		"link": "http://www.jdoqocy.com/click-4147908-10432892"
+	},
+	{
+		"name": "Simply Youth Ministry",
+		"domain": "simplyyouthministry.com",
+		"desc": "5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10413863"
+	},
+	{
 		"name": "Skechers",
-    "domain": "",
-		"desc": "Makers of athletic, dress, casual and work shoes for Women, Men and Kids.",
-		"link": "http://www.dpbolvw.net/click-4147908-10662742",
-		"img": "skechers.png",
-		"aff": true,
-		"live": true
+		"domain": "skechers.com",
+		"desc": "2%",
+		"link": "http://www.dpbolvw.net/click-4147908-10662742"
 	},
 	{
-		"id": 53,
-		"tags": [20],
 		"name": "Snapfish",
-    "domain": "",
-		"desc": "Snapfish is a web-based photo sharing and photo printing service that offers cards, photos, gifts and more.",
-		"link": "http://www.tkqlhce.com/click-4147908-10836374",
-		"img": "snapfish.png",
-		"aff": true,
-		"live": true
+		"domain": "snapfish.com",
+		"desc": "5%-7.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10389942"
 	},
 	{
-		"id": 54,
-		"tags": [10],
 		"name": "Soap.com",
-    "domain": "",
-		"desc": "Offers Health, Beauty & Household Essentials with 24/7 customer service, free shipping and a 365-day return policy.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000032029712&pubid=21000000000316594",
-		"img": "soap.png",
-		"aff": true,
-		"live": true
+		"domain": "soap.com",
+		"desc": "5.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000032029712&pubid=21000000000316594"
 	},
 	{
-		"id": 120,
-		"tags": [5,6,14],
-		"name": "Sony",
-    "domain": "",
-		"desc": "Sony computers, electronics, playstation, games and more.",
-		"link": "http://www.sony.com/index.php",
-		"img": ".png",
-		"aff": false,
-		"live": false
+		"name": "Soccer.com",
+		"domain": "soccer.com",
+		"desc": "3.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10747292"
 	},
 	{
-		"id": 23,
-		"tags": [17],
+		"name": "South Beach Smoke",
+		"domain": "southbeachsmoke.com",
+		"desc": "15%",
+		"link": "http://www.tkqlhce.com/click-4147908-10807932"
+	},
+	{
+		"name": "Spirit Line",
+		"domain": "spiritline.com",
+		"desc": "6%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10863229"
+	},
+	{
 		"name": "Sports Authority",
-    "domain": "",
-		"desc": "Sports Authority - the nation's preeminent full-line sporting goods chain. Shop for your favorite brands",
-		"link": "http://www.pntra.com/t/Sj9GSUtLP0dLSUdLP0dDREtE",
-		"img": "sportsauthority.png",
-		"aff": true,
-		"live": true
+		"domain": "sportsauthority.com",
+		"desc": "1.5%",
+		"link": "http://www.pntra.com/t/Sj9GSUtLP0dLSUdLP0dDREtE"
 	},
 	{
-		"id": 144,
-		"tags": [4],
-		"name": "Spun",
-    "domain": "",
-		"desc": "Sustainable women's fashion.",
-		"link": "http://www.choosespun.com",
-		"img": "spun.png",
-		"aff": false,
-		"live": true,
-		"deals": [
-		]
+		"name": "Steep and Cheap",
+		"domain": "steepandcheap.com",
+		"desc": "1%",
+		"link": "http://www.kqzyfj.com/click-4147908-10911247"
 	},
 	{
-		"id": 119,
-		"tags": [1],
-		"name": "Steve Madden",
-    "domain": "",
-		"desc": "Shoes, sandals, boots, handbags, accessories and more.",
-		"link": "http://www.stevemadden.com/",
-		"img": ".png",
-		"aff": false,
-		"live": false
+		"name": "Straight Talk",
+		"domain": "straighttalk.com",
+		"desc": "11%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10930509"
 	},
 	{
-		"id": 55,
-		"tags": [1,17],
+		"name": "Steetside Auto",
+		"domain": "streetsideauto.com",
+		"desc": "4%",
+		"link": "http://www.jdoqocy.com/click-4147908-10695891"
+	},
+	{
+		"name": "Studio 6",
+		"domain": "staystudio6.com",
+		"desc": "2%",
+		"link": "http://www.jdoqocy.com/click-4147908-10707157"
+	},
+	{
+		"name": "Stumps Party",
+		"domain": "stumpsparty.com",
+		"desc": "2.5%-5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10747190"
+	},
+	{
 		"name": "Sun Diego",
-    "domain": "",
-		"desc": "Offers surf, skate, and snowboarding products and accessories. Founded in San Diego, California.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000027280222&pubid=21000000000316594",
-		"img": "sundiego.png",
-		"aff": true,
-		"live": true
+		"domain": "sundiego.com",
+		"desc": "3%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000027280222&pubid=21000000000316594"
 	},
 	{
-		"id": 159,
-		"tags": [20,6,13,8],
-		"name": "Sweetwater",
-    "domain": "",
-		"desc": "World's leading music technology and instrument retailer.",
-		"link": "http://www.sweetwater.com",
-		"img": "sweetwater.png",
-		"aff": false,
-		"live": true
+		"name": "Super Media Store",
+		"domain": "supermediastore.com",
+		"desc": "1%-5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10368479"
 	},
 	{
-		"id": 145,
-		"tags": [1,4],
-		"name": "Talbots",
-    "domain": "",
-		"desc": "Women's clothing, swimwear, suits, and accessories with a modern twist.",
-		"link": "http://www.talbots.com",
-		"img": "talbots.png",
-		"aff": false,
-		"live": true
+		"name": "Swim Suits For All",
+		"domain": "swimsuitsforall.com",
+		"desc": "2%-5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10753437"
 	},
 	{
-		"id": 14,
-		"tags": [1,2,3,4,5,6,7,19,9,10,11,13,15,16,17,8,14],
+		"name": "Symantec",
+		"domain": "norton.com",
+		"desc": "7.5%-15%",
+		"link": "http://www.dpbolvw.net/click-4147908-10574256"
+	},
+	{
 		"name": "Target",
-    "domain": "",
-		"desc": "An American retailer with over 800,000 items for sale online - Founded in 1902.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000027328188&pubid=21000000000316594",
-		"img": "target.png",
-		"aff": true,
-		"live": true
+		"domain": "target.com",
+		"desc": "1.5%-3.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000027328188&pubid=21000000000316594"
 	},
 	{
-		"id": 162,
-		"tags": [19,9],
-		"name": "Tasting Room",
-    "domain": "",
-		"desc": "Taste wines before deciding to buy in the comfort of your home with exclusive wine samplers.",
-		"link": "http://www.tastingroom.com",
-		"img": "tastingroom.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 56,
-		"tags": [3],
 		"name": "Textbooks.com",
-    "domain": "",
-		"desc": "Browse the largest selection of new and used textbooks online, rent textbooks or sell your college textbooks online",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000028368621&pubid=21000000000316594",
-		"img": "textbooks.png",
-		"aff": true,
-		"live": false
+		"domain": "textbooks.com",
+		"desc": "3%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000036523048&pubid=21000000000316594"
 	},
 	{
-		"id": 114,
-		"tags": [3,4,6,9,8],
+		"name": "Textbookx.com",
+		"domain": "textbookx.com",
+		"desc": "2.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=20738.10000003&type=3&subid=0"
+	},
+	{
+		"name": "Things Remembered",
+		"domain": "thingsremembered.com",
+		"desc": "3.5%-5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=20738.10000003&type=3&subid=0"
+	},
+	{
 		"name": "ThinkGeek",
-    "domain": "",
-		"desc": "Stuff for smart masses.",
-		"link": "http://www.tkqlhce.com/click-4147908-10784884",
-		"img": "thinkgeek.png",
-		"aff": true,
-		"live": true
+		"domain": "thinkgeek.com",
+		"desc": "3.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10784884"
 	},
 	{
-		"id": 117,
-		"tags": [4],
-		"name": "Threadless",
-    "domain": "",
-		"desc": "The best tees on the planet.",
-		"link": "http://www.threadless.com/",
-		"img": ".png",
-		"aff": false,
-		"live": false
+		"name": "Ticket Liquidator",
+		"domain": "ticketliquidator.com",
+		"desc": "6%",
+		"link": "http://www.kqzyfj.com/click-4147908-10770380"
 	},
 	{
-		"id": 58,
-		"tags": [5,6,14],
+		"name": "Ticket Network",
+		"domain": "ticketnetwork.com",
+		"desc": "6%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10720094"
+	},
+	{
 		"name": "Tiger Direct",
-    "domain": "",
-		"desc": "Serving PC and electronics enthusiasts for over 20 years.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=102327.10000077&type=4&subid=0",
-		"img": "tigerdirect.png",
-		"aff": true,
-		"live": true
+		"domain": "tigerdirect.com",
+		"desc": "1.5%-5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=102327.10000077&type=4&subid=0"
 	},
 	{
-		"id": 31,
-		"tags": [1,4],
 		"name": "Tillys",
-    "domain": "",
-		"desc": "Shop the Latest Surf and Skate Clothing, Shoes and Accessories. Founded in 1982.",
-		"link": "http://www.kqzyfj.com/click-4147908-10460352",
-		"img": "tillys.png",
-		"aff": true,
-		"live": true
+		"domain": "tillys.com",
+		"desc": "3.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10460352"
 	},
 	{
-		"id": 15,
-		"tags": [2],
 		"name": "Tire Rack",
-    "domain": "",
-		"desc": "Great selection of wheels & tires online! Research and preview wheels on your car. Package deals delivered to your door.",
-		"link": "http://www.jdoqocy.com/click-4147908-10376887",
-		"img": "tirerack.png",
-		"aff": true,
-		"live": true
+		"domain": "tirerack.com",
+		"desc": "3%",
+		"link": "http://www.jdoqocy.com/click-4147908-10376887"
 	},
 	{
-		"id": 29,
-		"tags": [1],
-		"name": "Tom's Shoes",
-    "domain": "",
-		"desc": "Shoe makers founded on a simple premise: For every pair you purchase, TOMS will give a pair of shoes to a child in need. One for One.",
-		"link": "http://www.toms.com/",
-		"img": "toms.png",
-		"aff": false,
-		"live": true
+		"name": "Tom Tom",
+		"domain": "tomtom.com",
+		"desc": "1.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10766887"
 	},
 	{
-		"id": 59,
-		"tags": [6,8,7],
-		"name": "Toys R Us",
-    "domain": "",
-		"desc": "Leading online retailer for kids toys.",
-		"link": "http://www.toysrus.com/",
-		"img": "toysrus.png",
-		"aff": false,
-		"live": true
+		"name": "Tracfone",
+		"domain": "tracfone.com",
+		"desc": "15%",
+		"link": "http://www.tkqlhce.com/click-4147908-10435229"
 	},
 	{
-		"id": 12,
-		"tags": [18],
 		"name": "Travelocity",
-    "domain": "",
-		"desc": "Offers a variety of travel services, including fare finder, hotel and car rental information, reservations and destination information.",
-		"link": "http://www.tkqlhce.com/click-4147908-10395449",
-		"img": "travelocity.png",
-		"aff": true,
-		"live": true
+		"domain": "travelocity.com",
+		"desc": "1%-3%",
+		"link": "http://www.tkqlhce.com/click-4147908-10395449"
 	},
 	{
-		"id": 98,
-		"tags": [5],
+		"name": "Trend Micro",
+		"domain": "trendmicro.com",
+		"desc": "10%",
+		"link": "http://www.jdoqocy.com/click-4147908-10419767"
+	},
+	{
+		"name": "TRIA Beauty",
+		"domain": "triabeauty.com",
+		"desc": "4%",
+		"link": "http://www.jdoqocy.com/click-4147908-10693357"
+	},
+	{
+		"name": "Trip Advisor",
+		"domain": "tripadvisor.com",
+		"desc": "25%",
+		"link": "http://www.tkqlhce.com/click-4147908-10777593"
+	},
+	{
+		"name": "TRX",
+		"domain": "trxtraining.com",
+		"desc": "7.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10819462"
+	},
+	{
 		"name": "TurboTax",
-    "domain": "",
-		"desc": "#1-rated, best-selling tax software.",
-		"link": "http://www.jdoqocy.com/click-4147908-10458883",
-		"img": "turbotax.png",
-		"aff": true,
-		"live": true
+		"domain": "intuit.com",
+		"desc": "7.5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10458883"
 	},
 	{
-		"id": 169,
-		"tags": [5],
-		"name": "Uline",
-    "domain": "",
-		"desc": "Shipping boxes, packing materials and mailing supplies.",
-		"link": "http://www.uline.com",
-		"img": "uline.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 113,
-		"tags": [1,7,9,11],
 		"name": "Uncommon Goods",
-    "domain": "",
-		"desc": "Creative, eco-friendly gifts for birthdays, weddings, baby showers, anniversaries and more.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=54404.10000243&type=3&subid=0",
-		"img": "uncommongoods.png",
-		"aff": true,
-		"live": true
+		"domain": "uncommongoods.com",
+		"desc": "5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=54404.10000243&type=3&subid=0"
 	},
 	{
-		"id": 166,
-		"tags": [4],
-		"name": "UNIQLO",
-    "domain": "",
-		"desc": "A new-style Japanese firm making good casual clothes available for all to wear.",
-		"link": "http://www.uniqlo.com/us/",
-		"img": "uniqlo.png",
-		"aff": false,
-		"live": true
+		"name": "Verizon Wireless",
+		"domain": "verizonwireless.com",
+		"desc": "5%-7.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10389462"
 	},
 	{
-		"id": 168,
-		"tags": [5],
-		"name": "UPS",
-    "domain": "",
-		"desc": "Shipping, Freight, Logistics and Supply Chain Management.",
-		"link": "http://www.ups.com/us",
-		"img": "ups.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 118,
-		"tags": [1,4,11],
-		"name": "Urban Outfitters",
-    "domain": "",
-		"desc": "Clothing, accessories, and apartment wares for young women and men.",
-		"link": "http://www.urbanoutfitters.com",
-		"img": ".png",
-		"aff": false,
-		"live": false
-	},
-	{
-		"id": 146,
-		"tags": [4],
-		"name": "Vaute Couture",
-    "domain": "",
-		"desc": "A renegade fashion house that creates fabulous vegan coats.",
-		"link": "http://www.vautecouture.com/t-shop.aspx",
-		"img": "vautecouture.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 177,
-		"tags": [1,4,7,10,19,15],
-		"name": "Vegan Essentials",
-    "domain": "",
-		"desc": "Complete online vegan store for all your vegan products.",
-		"link": "http://www.veganessentials.com",
-		"img": "veganessentials.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 125,
-		"tags": [4,10],
-		"name": "Victoria's Secret",
-    "domain": "",
-		"desc": "The world's most glamorous lingerie. Chic women's clothing, sultry swimwear, and more.",
-		"link": "http://www.victoriassecret.com",
-		"img": "victoriasecret.png",
-		"aff": false,
-		"live": true
-	},
-	{
-		"id": 60,
-		"tags": [20],
 		"name": "Vista Print",
-    "domain": "",
-		"desc": "Custom low-price full color printing services inlcuding free online design tools.",
-		"link": "http://www.kqzyfj.com/click-4147908-10389462",
-		"img": "vistaprint.png",
-		"aff": true,
-		"live": true
+		"domain": "vistaprint.com",
+		"desc": "5%-10%",
+		"link": "http://www.kqzyfj.com/click-4147908-10389462"
 	},
 	{
-		"id": 2,
-		"tags": [1,20,2,3,4,5,6,7,19,9,10,11,13,15,16,17,8,14],
+		"name": "Walgreens",
+		"domain": "walgreens.com",
+		"desc": "3.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10654931"
+	},
+	{
 		"name": "Walmart",
-    "domain": "",
-		"desc": "Electronics, home furnishings, video games, baby gear and more.",
-		"link": "http://linksynergy.walmart.com/fs-bin/click?id=GU*lP9Glm/0&offerid=183959.10005617&type=3&subid=0",
-		"img": "walmart.png",
-		"aff": true,
-		"live": true
+		"domain": "walmart.com",
+		"desc": "2%",
+		"link": "http://linksynergy.walmart.com/fs-bin/click?id=GU*lP9Glm/0&offerid=183959.10005617&type=3&subid=0"
 	},
 	{
-		"id": 107,
-		"tags": [1,4],
+		"name": "Warner Bros Shop",
+		"domain": "wbshop.com",
+		"desc": "3.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-8123472"
+	},
+	{
+		"name": "Weight Watchers",
+		"domain": "weightwatchers.com",
+		"desc": "5%",
+		"link": "http://www.jdoqocy.com/click-4147908-10282125"
+	},
+	{
+		"name": "Whatever Works",
+		"domain": "whateverworks.com",
+		"desc": "2.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10656563"
+	},
+	{
+		"name": "Whiskey Militia",
+		"domain": "whiskeymilitia.com",
+		"desc": "1%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10911252"
+	},
+	{
+		"name": "Wolf Camera",
+		"domain": "wolfcamera.com",
+		"desc": "1.5%",
+		"link": "http://www.anrdoezrs.net/click-4147908-10475221"
+	},
+	{
+		"name": "Wolferman's",
+		"domain": "wolfermans.com",
+		"desc": "3.5%",
+		"link": "http://www.kqzyfj.com/click-4147908-10783195"
+	},
+	{
 		"name": "WomanWithin",
-    "domain": "",
-		"desc": "A complete line of casual wear for the plus size woman.",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000015054384&pubid=21000000000316594",
-		"img": "womanwithin.png",
-		"aff": true,
-		"live": true
+		"domain": "womanwithin.com",
+		"desc": "2.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000015054384&pubid=21000000000316594"
 	},
 	{
-		"id": 147,
-		"tags": [11,19],
-		"name": "Williams-Sonoma",
-    "domain": "",
-		"desc": "Gourmet foods, professional-quality cookware and kitchen decor.",
-		"link": "http://www.williams-sonoma.com",
-		"img": "williamssonoma.png",
-		"aff": false,
-		"live": true
+		"name": "Woodwind & Brasswind",
+		"domain": "wwbw.com",
+		"desc": "2%-4%",
+		"link": "http://www.dpbolvw.net/click-4147908-10567958"
 	},
 	{
-		"id": 148,
-		"tags": [19],
-		"name": "Wine Library",
-    "domain": "",
-		"desc": "Awesome online wine store. Home of WineLibrary TV's Gary Vaynerchuk.",
-		"link": "http://winelibrary.com/",
-		"img": "winelibrary.png",
-		"aff": false,
-		"live": true
+		"name": "Woot",
+		"domain": "woot.com",
+		"desc": "1%-4%",
+		"link": "http://www.tkqlhce.com/click-4147908-10848754"
 	},
 	{
-		"id": 80,
-		"tags": [19],
-		"name": "wine.com",
-    "domain": "",
-		"desc": "Easily find and ship the right wine at the #1 rated online wine store.",
-		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=212891.10000769&type=4&subid=0",
-		"img": "wine.png",
-		"aff": true,
-		"live": true
+		"name": "Wine.com",
+		"domain": "wine.com",
+		"desc": "2.5%",
+		"link": "http://click.linksynergy.com/fs-bin/click?id=GU*lP9Glm/0&offerid=212891.10000769&type=4&subid=0"
 	},
 	{
-		"id": 38,
-		"tags": [10],
 		"name": "Yves Rocher",
-    "domain": "",
-		"desc": "Formed in France, Yves Rocher is a producer of natural beauty products and cosmetics",
-		"link": "http://www.dpbolvw.net/click-4147908-10770769",
-		"img": "yvesrocher.png",
-		"aff": true,
-		"live": true
+		"domain": "yvesrocherusa.com",
+		"desc": "7.5%",
+		"link": "http://www.dpbolvw.net/click-4147908-10770769"
 	},
 	{
-		"id": 1,
-		"tags": [1],
-		"name": "Zappos",
-    "domain": "zappos.com",
-		"desc": "Free next day shipping on shoes, clothing, and more! 365-day return policy, over 1000 brands, 24/7 friendly customer service.",
-		"link": "http://www.zappos.com",
-		"img": "zappos.png",
-		"aff": false,
-		"live": true
+		"name": "ZAGG",
+		"domain": "zagg.com",
+		"desc": "5%-10%",
+		"link": "http://www.jdoqocy.com/click-4147908-10542188"
 	},
 	{
-		"id": 61,
-		"tags": [1,4],
 		"name": "Zazzle",
-    "domain": "",
-		"desc": "Create your own custom shirts, prints, mugs and more",
-		"link": "http://gan.doubleclick.net/gan_click?lid=41000000030935412&pubid=21000000000316594",
-		"img": "zazzle.png",
-		"aff": true,
-		"live": true
+		"domain": "zazzle.com",
+		"desc": "2.5%",
+		"link": "http://gan.doubleclick.net/gan_click?lid=41000000030935412&pubid=21000000000316594"
+	},
+	{
+		"name": "zChocolat",
+		"domain": "zchocolat.com",
+		"desc": "12.5%",
+		"link": "http://www.tkqlhce.com/click-4147908-10020803"
 	}
 ]}

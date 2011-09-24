@@ -34,9 +34,9 @@ function pungleExtension() {
     value = removeWWW(value.toLowerCase());
     
     for ( var i=0, len=pungleJSON.store.length; i<len; ++i ){
-		  if ( pungleJSON.store[i].domain == value && pungleJSON.store[i].live == true ) { 
+		  if ( pungleJSON.store[i].domain == value ) { 
 		    // log("EX:: getMerchantID => ID:" + pungleJSON.store[i].id + ", URL: " + value);
-		    return pungleJSON.store[i].id;
+		    return pungleJSON.store[i].domain;
 	    }
 		}
 		
@@ -56,7 +56,7 @@ function pungleExtension() {
       value = removeWWW(value.toLowerCase());
       
       for ( var i=0, len=pungleJSON.store.length; i<len; ++i ){
-  		  if ( pungleJSON.store[i].domain == value && pungleJSON.store[i].live == true ) { 
+  		  if ( pungleJSON.store[i].domain == value ) { 
   		    log("EX:: Live Vendor Exists => NAME: " + pungleJSON.store[i].name);
   		    return true;
   	    }
